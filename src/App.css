@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --purple:rgba(123, 31, 255, 1);
+  --purple50:rgba(123, 31, 255, 0.5);
+  --purple25:rgba(123, 31, 255, 0.25);
+  --bg: rgb(0, 0, 0); /* black(alertbg, Alerticon text) */
+  --bg50: rgba(0, 0, 0, 0.5); /* black(eventcardtextbg,) */
+  --bg75: rgba(0, 0, 0, 0.75);
+  --bg25: rgba(0, 0, 0, 0.25); /* black(teamcardshadow) */
+  --primary: rgb(173, 31, 255) /* purple(alert, Alert Text,Allbuttons,) */;
+  --primary50: rgba(173, 31, 255, 0.5); /* purple(Login button) */
+  --primary25: rgba(173, 31, 255, 0.25); /* purple(teamcardoverlay) */
+  --secondary: rgb(255, 255, 255); /* white(Eventcardbg,Eventcardtext,Allbuttontexts,headings) */
+  --secondary75: rgba(255, 255, 255, 0.75);
+  --secondary50: rgba(255, 255, 255, 0.5); /* white(AllstrongShadows),headernav */
+  --secondary25: rgba(255, 255, 255, 0.25);
+  --boarder: rgba(255, 255, 255, 0.15) solid 1px; /* GREY(Alert,Header) */
+  --time:0.5s; /* time of Exploremorebuttonanimation */
+  --gradient: linear-gradient(to bottom right, #000000, #00000000); /* gradient */
+  --gridboarder: rgba(255, 255, 255, 0.171);
+  --gridshadow: 0px 0px 100px rgba(102, 0, 255, 0.164), 0px 0px 200px rgba(255, 255, 255, 0.151)
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

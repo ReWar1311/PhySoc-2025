@@ -1,0 +1,75 @@
+.teamcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 180px ;
+    height: 260px ;
+    background-color: var(--secondary75);
+    box-shadow: 0 0 10px var(--bg25);
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--secondary);
+    position: relative; /* Ensure the overlay and content are positioned relative to this container */
+}
+
+.teamcard-content {
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.teamcard-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg75); /* Adjust the overlay color and opacity */    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+    z-index: 1;
+}
+
+.teamcard:hover .teamcard-overlay {
+    opacity: 1;
+}
+
+.teamcard:hover .teamcard-content {
+    opacity: 0;
+}
+
+.teamcard:hover {
+    transform: translateY(-10px);
+}
+
+.teamcard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary25); 
+    opacity: 0;
+    z-index: 1;
+}
+
+.teamcard:hover::before {
+    opacity: 1;
+}
+
+.teamcard h3, .teamcard p {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .teamcard {
+        width: 100%;
+    }
+    
+}

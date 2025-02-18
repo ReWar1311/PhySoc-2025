@@ -1,0 +1,30 @@
+.footer{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg);
+    color: var(--secondary);
+    text-align: center;
+    padding: 3px;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    font-size: 13px;
+}
+.footer-logo{
+    margin: 13px 50px;
+}
+.social-icon{
+    opacity:    0.5;
+    scale: 0.8;
+}
+
+@media screen and (max-width: 600px){
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}

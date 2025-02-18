@@ -1,0 +1,85 @@
+header{
+    max-width: 600px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    border: var(--boarder) ;
+    font-size: 13px;
+    pointer-events: all;
+
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    height: 32px;
+    width: auto;
+    margin-left: 16px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.logo>img{
+    height: 100%;
+    width: auto;
+}
+li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+li>a{
+    color: var(--secondary50);
+    text-decoration: none;
+}
+li>a:hover{
+    color: var(--secondary);
+}
+
+.login-btn{
+    background-color: var(--primary50);
+    color: var(--secondary);
+    border: none;
+    border-radius: 8px;
+    padding: 0px 20px;
+    cursor: pointer;
+    height: 30px;
+    padding: 2px 15px;
+    margin-right: 16px;
+    box-shadow: 0px 0px 6px 3px var(--secondary50) inset;
+}
+.login-btn:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px){
+    header{
+        max-width: 100%;
+        margin: 25px;
+    }
+    .header-links{
+        display: none;
+    }
+    .logo{
+        margin-left: 16px;
+    }
+    .login-btn{
+        margin-right: 16px;
+    }
+    
+}

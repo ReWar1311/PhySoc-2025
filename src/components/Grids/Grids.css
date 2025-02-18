@@ -1,0 +1,35 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(15, auto);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+}
+.gradient-div {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--gradient);
+    position: absolute;
+    pointer-events: none;
+}
+.grid-item {
+    width: (100/15)vw;
+    height: (100/15)vw;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 1px dotted var(--gridboarder);
+    position: relative;
+    transition: all 5s ease; 
+    pointer-events: auto;
+}
+
+.grid-item:hover {
+    transition: all 0s ease;
+    box-shadow: var(--gridshadow);
+}
