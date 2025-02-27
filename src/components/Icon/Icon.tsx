@@ -35,15 +35,16 @@ type Props = SVGProps<SVGSVGElement> & {
   name: IconName;
 };
 
-const Icon: FC<Props> = ({ name, ...props }) => {
+const Icon: FC<Props> = ({ name,width=24,height=24, ...props }) => {
   const SVG = icons[name];
 
   return (
     <SVG
       {...props}
       className="icon"
-      width="24"
-      height="24"
+      width={width}
+      height={height}
+      fill='currentColor'
       stroke=''
     />
   );

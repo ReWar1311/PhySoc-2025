@@ -1,14 +1,12 @@
-.icon {
-  width: 24px;
-  height: 24px;
-}
 
 .icon [stroke-width] {
-  fill: none;
   stroke: white;
 }
 
 .icon:hover [stroke-width] {
   stroke: var(--primary);
+}
+.icon:hover {
+  fill: var(--primary);
 }
 

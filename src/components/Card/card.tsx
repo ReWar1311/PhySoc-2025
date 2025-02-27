@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { SocialLink } from '../SocialLink/SocialLink';
-
-import { IconName } from '../../common/types/types';
 import './card.css';
 
 type Props = {
@@ -11,7 +9,10 @@ type Props = {
   description: string;
   href?: string;
   instagramUrl: string;
-  topics?: IconName[];
+  topics?: string[];
+  date?: string;
+  time?: string;
+  location?: string;
 };
 
 const Card: FC<Props> = ({
@@ -20,6 +21,8 @@ const Card: FC<Props> = ({
   description,
   href,
   instagramUrl: instaUrl,
+  topics,
+  date,
 }) => {
   return (
     <div className="card">
@@ -50,13 +53,14 @@ const Card: FC<Props> = ({
           <SocialLink title="View on Instagram" href={instaUrl} iconName="externalLink" />
         </div>
         <p className="card-text">{description}</p>
-        {/* <div className="card-topics">
+        <div className="card-topics">
           {topics?.map((topic) => (
-            <div key={topic} title={topic}>
-              <Icon name={topic} />
-            </div>
+            <span key={topic} title={topic}>
+              {topic}
+            </span>
           ))}
-        </div> */}
+        </div>
+          <p className="card-date">{date?date:"Coming Soon"}</p>
 
         <div className="card-background">
           <div className="card-tiles">
