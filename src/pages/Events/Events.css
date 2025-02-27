@@ -4,22 +4,30 @@
     left: 0;
     z-index: 1;
     width: 100%;
+    /* background-image: linear-gradient(to bottom right, 
+    rgb(0, 0, 0) 0%,
+    rgb(7, 0, 12) 50%,
+    rgb(22, 0, 37) 100%
+  ); */
 }
 .event-cards {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* justify-content: center; */
     align-items: center;
     margin-top: 0;
     z-index: 2;
-    overflow-x: auto;
+    /* overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none; */
     gap: 20px;
     padding: 20px;
 }
+/* .upcoming-cards {
+    justify-self: center;
+} */
 
 .event-cards::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
@@ -31,4 +39,22 @@
     margin-left: 20px;
     margin-bottom: 0;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.Heading::before{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary);
+    margin-right: 10px;
+}
+.Heading::after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary);
+    margin-left: 10px;
 }

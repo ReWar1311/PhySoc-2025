@@ -9,8 +9,8 @@ const Events: React.FC = () => {
     <div className="event">
       <div className="event-bg">
         <Header />
-        <div className="Heading">Upcoming:</div>
-        <div className="event-cards">
+        <div className="Heading">Upcoming</div>
+        <div className="event-cards upcoming-cards">
           <Card
             title="Steller Safari"
             image={event}
@@ -19,7 +19,7 @@ const Events: React.FC = () => {
           />
 
         </div>
-        <div className="Heading">Future:</div>
+        <div className="Heading">Future<div></div></div>
         <div className="event-cards">
           <Card
             instagramUrl=""
@@ -52,7 +52,7 @@ const Events: React.FC = () => {
             description="desc"
           />
         </div>
-        <div className="Heading">Past:</div>
+        <div className="Heading">Past</div>
         <div className="event-cards">
           <Card
             instagramUrl=""
