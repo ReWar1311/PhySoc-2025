@@ -1,0 +1,239 @@
+.card {
+  background-color: var(--bg50);
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .05), 0px 8px 15px rgba(0, 0, 0, .1), 0 0 0 1px rgba(255, 255, 255, .1);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow .25s;
+  z-index: 1;
+  min-width: 300px;
+  width  : 460px;
+  height: auto;
+  /* border-radius: 10px; */
+}
+
+.card:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .04), 0px 15px 25px rgba(0, 0, 0, .3), 0 0 0 1px rgba(255, 255, 255, .2);
+}
+
+.card:hover .shine {
+  opacity: .6;
+  transform: translate(-60%, -60%);
+}
+
+.card:hover .card-tiles {
+  opacity: .15;
+  transition-delay: .25s;
+}
+
+.card:hover .card-tile {
+  animation-name: card-tile;
+}
+
+.card:hover .card-line:before {
+  transform: scaleX(1);
+}
+
+.card:hover .card-line:after {
+  transform: scaleY(1);
+}
+
+.card:hover .card-line_1:before,
+.card:hover .card-line_1:after {
+  transition-delay: 0s;
+}
+
+.card:hover .card-line_2:before,
+.card:hover .card-line_2:after {
+  transition-delay: .15s;
+}
+
+.card:hover .card-line_3:before,
+.card:hover .card-line_3:after {
+  transition-delay: .3s;
+}
+
+.card-link_img {
+  display: block;
+  border-radius: 10px;
+  margin: 16px 16px 0;
+  box-sizing: border-box;
+}
+
+.card-img {
+  border-radius: 10px;
+  aspect-ratio: 1.5 / 1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.card-content {
+  padding: 16px 16px;
+  border-radius: 0 0 15px 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-content_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card-title_link {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 10px;
+}
+.card-title_link:hover {
+  color: var(--primary);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.card-text {
+  color: var(--secondary50);
+  font-size: 1 rem;
+  margin-bottom: 10px;
+}
+
+.card-topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 10px;
+  margin-top: auto;
+}
+
+.card-shine {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  transition: .5s;
+  z-index: -1;
+}
+
+.card-background {
+  position: absolute;
+  inset: 0;
+  /* margin-top: -10px; */
+  mask-image: radial-gradient(circle at 60% 50%, #000 0%, #000 15%, transparent 80%);
+  z-index: -1;
+}
+
+.card-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity .25s;
+}
+
+.card-tile {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  opacity: 0;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.card-tile.card-tile_5,
+.card-tile.card-tile_9,
+.card-tile.card-tile_10 {
+  animation-delay: -2s;
+}
+
+.card-tile.card-tile_1,
+.card-tile.card-tile_2,
+.card-tile.card-tile_6 {
+  animation-delay: -4s;
+}
+
+.card-tile.card-tile_3,
+.card-tile.card-tile_4,
+.card-tile.card-tile_7 {
+  animation-delay: -6s;
+}
+
+.card-line {
+  position: absolute;
+  inset: 0;
+}
+
+.card-line:before,
+.card-line:after {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  opacity: .15;
+  transition: transform .35s;
+}
+
+.card-line:before {
+  height: 1px;
+  width: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.card-line:after {
+  width: 1px;
+  height: 100%;
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+
+.card-line.card-line_1:before,
+.card-line.card-line_1:after {
+  transition-delay: .3s;
+}
+
+.card-line.card-line_1:before {
+  top: 33.3%;
+}
+
+.card-line.card-line_1:after {
+  left: 25%;
+}
+
+.card-line.card-line_2:before,
+.card-line.card-line_2:after {
+  transition-delay: .15s;
+}
+
+.card-line.card-line_2:before {
+  top: 66.6%;
+}
+
+.card-line.card-line_2:after {
+  left: 50%;
+}
+
+.card-line.card-line_3:after {
+  left: 75%;
+}
+
+@keyframes card-tile {
+  0%, 12.5%, 100% {
+    opacity: 1;
+  }
+  25%, 82.5% {
+    opacity: 0;
+  }
+}
