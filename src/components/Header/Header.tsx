@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { items =['Home', 'Gallary', 'Events', 'Our Team'] , logo, login } = props;
+  const { items =['Home', 'Gallery', 'Events', 'Our Team'] , logo, login } = props;
   return (
     <header>
     <a href='/' className= 'logo'><img  src={logo||logo2} alt="logo" /></a>

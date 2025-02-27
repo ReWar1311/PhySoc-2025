@@ -1,0 +1,124 @@
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  
+  .carousel-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .carousel-main-image {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    border: 3px solid var(--primary);
+    border-radius: 20px;
+  }
+  
+  .carousel-image {
+    width: 20%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .previous {
+    transform: translateX(-10%) scale(0.9);
+  }
+  
+  .next {
+    transform: translateX(10%) scale(0.9);
+  }
+  
+  .main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .blurred-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: -1;
+    transform: scale(1.1);
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .slide-in-from-right {
+    animation: slide-in-from-right 0.5s ease-out;
+  }
+  
+  .slide-in-from-left {
+    animation: slide-in-from-left 0.5s ease-out;
+  }
+  
+  .slide-in-side-left, .slide-in-side-right {
+    animation: slide-in-side 0.5s ease-out;
+  }
+  
+  @keyframes slide-in-from-right {
+    from { transform: translateX(100%) scale(1.1); }
+    to { transform: translateX(0) scale(1.1); }
+  }
+  
+  @keyframes slide-in-from-left {
+    from { transform: translateX(-100%) scale(1.1); }
+    to { transform: translateX(0) scale(1.1); }
+  }
+  
+  @keyframes slide-in-side {
+    from { opacity: 0.5; }
+    to { opacity: 0.7; }
+  }
+  

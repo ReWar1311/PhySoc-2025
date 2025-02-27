@@ -31,6 +31,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      
         <Footer />
     </div>
   );
