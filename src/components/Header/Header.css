@@ -1,20 +1,23 @@
 header{
     max-width: 600px;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto 0;
     font-weight: 400;
-    background-color: var(--bg);
+    background-color: var(--bg75prctg);
+    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border-radius: 14px;
-    border: var(--boarder) ;
+    border: var(--boarder);
     font-size: 13px;
     pointer-events: all;
-
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -37,20 +40,38 @@ header{
     height: 100%;
     width: auto;
 }
-li{
+.nav-item{
     list-style-type: none;
     margin: 0 10px;
 }
-li>a{
+.nav-item>a{
     color: var(--secondary50);
     text-decoration: none;
+    position: relative;
+    display: inline-block;
 }
-li>a:hover{
+.nav-item>a:hover{
     color: var(--secondary);
 }
+.nav-item>a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item>a:hover::after {
+    transform: scaleX(1);
+  }
 
 .login-btn{
-    background-color: var(--primary50);
+    background-color: var(--primary);
     color: var(--secondary);
     border: none;
     border-radius: 8px;
@@ -59,10 +80,10 @@ li>a:hover{
     height: 30px;
     padding: 2px 15px;
     margin-right: 16px;
-    box-shadow: 0px 0px 6px 3px var(--secondary50) inset;
 }
 .login-btn:hover{
-    background-color: var(--primary);
+    background-color: var(--primary50);
+    box-shadow: 0px 0px 6px 3px var(--secondary50) inset;
     color: var(--secondary);
     transform: translateY(-2px);
 }

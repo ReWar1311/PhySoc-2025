@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = (props) => {
     <a href='/' className= 'logo'><img  src={logo||logo2} alt="logo" /></a>
     <nav className='navbar'>
     <ul className='nav-links header-links'>
-        {items.map((item, index) => (<li key={index}><a href={`/${item.replace(/\s/g, '').toLowerCase()}`}>{item}</a></li>))}
+        {items.map((item, index) => (<li className='nav-item' key={index}><a href={`/${item.replace(/\s/g, '').toLowerCase()}`}>{item}</a></li>))}
     </ul>
     </nav>
     {!login && <button className='login-btn'>Login/Signup</button>}

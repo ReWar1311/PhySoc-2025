@@ -7,7 +7,8 @@
   --purple50:rgba(123, 31, 255, 0.5);
   --purple25:rgba(123, 31, 255, 0.25);
   --bg: rgb(0, 0, 0); /* black(alertbg, Alerticon text) */
-  --bg50: rgb(26, 26, 26); /* black(eventcardtextbg,) */
+  --bg50: rgb(26, 26, 26); 
+  --bg75prctg: rgba(0, 0, 0, 0.75);/* black(eventcardtextbg,) */
   --bg75: rgb(24, 24, 24);
   --bg25: rgba(0, 0, 0, 0.25); /* black(teamcardshadow) */
   --primary: rgb(173, 31, 255) /* purple(alert, Alert Text,Allbuttons,) */;

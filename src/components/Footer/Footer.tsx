@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = (props) => {
       <nav className="navbar">
       <ul className="nav-links">
         {options.map((option, index) => (
-          <li key={index}>
+          <li className="nav-item" key={index}>
             <a href={`/${option}`}>{option}</a>
           </li>
         ))}
