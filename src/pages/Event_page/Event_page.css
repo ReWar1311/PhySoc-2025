@@ -1,0 +1,403 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .event-page {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-btn {
+    background-color: #6e44ff;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+  }
+  
+  /* Left Section */
+.left-section {
+    width: 65%; /* Take up more space for better balance */
+    padding: 20px;
+  }
+  
+  /* Carousel */
+  .carousel {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden; /* Hide overflowing images */
+  }
+  
+  .event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 5px; /* Move slightly outside the image */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+  
+  .next-btn {
+    right: 5px; /* Move slightly outside the image */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+  
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+  }
+  
+  /* Event Details Container */
+  .event-details-container {
+    background-color: #1e1e1e; /* Dark background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .event-name {
+    font-size: 2rem; /* Large heading for emphasis */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+  }
+  
+  .event-description {
+    font-size: 1rem;
+    color: #b3b3b3; /* Subtle gray for description text */
+  }
+  
+  .event-date {
+    font-size: 1rem;
+    color: #ff4d4d; /* Red text to highlight urgency or importance */
+  }
+  
+  .divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* Event Details Paragraph */
+  /* Event Details Section */
+.event-details-container {
+    background-color: #121212; /* Dark background for contrast */
+    padding: 25px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  /* Event Name */
+  .event-name {
+    font-size: 2rem; /* Large heading for emphasis */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 10px;
+  }
+  
+  /* Event Description */
+  .event-description {
+    font-size: 1rem;
+    color: #b3b3b3; /* Subtle gray for description text */
+    margin-bottom: 15px;
+  }
+  
+  /* Event Date */
+  .event-date {
+    font-size: 1rem;
+    color: #ff4d4d; /* Red text to highlight urgency or importance */
+    margin-bottom: 15px;
+  }
+  
+  /* Horizontal Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid #444444; /* Subtle gray divider line */
+    margin: 20px 0;
+  }
+  
+  /* Event Details Paragraph */
+  .event-details {
+    font-size: 1rem;
+    line-height: 1.6; /* Improve readability with proper line height */
+    color: #d9d9d9; /* Light gray text for better readability on dark background */
+  }  
+
+  /* Your Teams Section */
+.your-teams {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  .your-teams h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .team-card {
+    background-color: #292929; /* Slightly lighter than the section background */
+    border: 1px solid #444; /* Border for definition */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .team-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  
+  .team-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3; /* Subtle text color for slogans */
+  }
+  
+  .team-card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .team-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .team-card ul li span {
+    font-weight: bold;
+  }
+  
+  /* Status Badges */
+  .leader-badge,
+  .pending-badge,
+  .rejected-badge,
+  .accepted-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .leader-badge {
+    background-color: #6e44ff; /* Purple for leader */
+  }
+  
+  .pending-badge {
+    background-color: #ffa500; /* Orange for pending */
+  }
+  
+  .rejected-badge {
+    background-color: #ff4d4d; /* Red for rejected */
+  }
+  
+  .accepted-badge {
+    background-color: #4caf50; /* Green for accepted */
+  }
+  
+  /* Buttons in Team Card */
+  .delete-team-btn,
+  .invite-members-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .delete-team-btn {
+    background-color: #ff4d4d; /* Red button for delete action */
+  }
+  
+  .invite-members-btn {
+    background-color: #6e44ff; /* Purple button for inviting members */
+  }
+  
+  /* Hover Effects */
+  .delete-team-btn:hover,
+  .invite-members-btn:hover {
+    opacity: 0.9; /* Slight hover effect */
+  }
+  
+  /* Invitations Section */
+  .invitations {
+      margin-top:20 px
+  }
+
+  /* Right Section */
+.right-section {
+    width: 40%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #1e1e1e; /* Dark background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  /* Timer and Create Team Button */
+  .team-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-team-btn {
+    background-color: #6e44ff; /* Purple button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .create-team-btn:hover {
+    background-color: #5a36cc; /* Slightly darker purple on hover */
+  }
+  
+  .timer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ff4d4d; /* Red text for urgency */
+  }
+  
+  /* Your Teams Section */
+  .your-teams {
+    margin-top: 20px;
+  }
+  
+  .your-teams h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Team Card */
+  .team-card {
+    background-color: #292929; /* Slightly lighter than the section background */
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .team-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Invitations Section */
+
+.invitations {
+    margin-top: 20px;
+  }
+  
+  .invitations h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff; /* White text for headings */
+  }
+  
+  /* Invitation Card */
+  .invitation-card {
+    background-color: #292929; /* Slightly lighter than the section background */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  .invitation-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3; /* Subtle text color for description */
+  }
+  
+  .invitation-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text for team name */
+  }
+  
+  .invitation-card .invitation-actions {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+  }
+  
+  .invitation-card .accept-btn,
+  .invitation-card .reject-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .accept-btn {
+    background-color: #6e44ff; /* Purple button for accept action */
+    color: #ffffff;
+  }
+  
+  .accept-btn:hover {
+    background-color: #5a36cc; /* Slightly darker purple on hover */
+  }
+  
+  .reject-btn {
+    background-color: #ff4d4d; /* Red button for reject action */
+    color: #ffffff;
+  }
+  
+  .reject-btn:hover {
+    background-color: #cc3c3c; /* Slightly darker red on hover */
+  }
+  
+  /* Rejected Status */
+  .rejected-status {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ff4d4d; /* Red background for rejected status */
+    color: #ffffff; /* White text for rejected status */
+  }
+  
+  /* Team Details Link */
+  .team-details-link {
+    text-decoration: none; /* Remove underline from link */
+    font-size: 0.9rem;
+    color: #6e44ff; /* Purple link for team details */
+  }
+  
+  .team-details-link:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+  }
+  
+  
