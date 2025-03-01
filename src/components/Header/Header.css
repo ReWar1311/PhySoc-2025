@@ -15,6 +15,7 @@ header{
     z-index: 1000;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 
@@ -88,14 +89,96 @@ header{
     transform: translateY(-2px);
 }
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 16px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Active Hamburger Menu Styles */
+.bar.active:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.bar.active:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Login Button */
+.mobile-login {
+    display: none;
+}
+
 @media screen and (max-width: 600px){
     header{
         max-width: 100%;
-        margin: 25px;
+        margin: 25px 15px;
     }
     .header-links{
         display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--bg75prctg);
+        backdrop-filter: blur(8px);
+        top: 100%;
+        right: -100%;
+        width: 80%;
+        height: auto;
+        padding: 20px 0;
+        border-radius: 0 0 14px 14px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: var(--boarder);
+        border-top: none;
+        z-index: 1000;
     }
+    
+    .header-links.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .desktop-login {
+        display: none;
+    }
+    
+    .mobile-login {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .nav-item > a {
+        display: block;
+        padding: 10px 20px;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+    }
+    
     .logo{
         margin-left: 16px;
     }
