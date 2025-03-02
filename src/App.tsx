@@ -5,7 +5,7 @@ import Team from './pages/Team/Team'
 import Events from './pages/Events/Events'
 import Gallery from './pages/Gallery/Gallery'
 import BadGateway from './404/404'
-import EventPage from './pages/Event_page/event_page'
+import EventPage from './pages/EventPage/EventPage'
 
 
 function App() {

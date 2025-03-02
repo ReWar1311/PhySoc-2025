@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./event_page.css"; // Import your CSS file for styling
+import "./EventPage.css"; // Import your CSS file for styling
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Variants } from "framer-motion";
