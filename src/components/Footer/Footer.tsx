@@ -9,7 +9,7 @@ const Footer: React.FC<FooterProps> = (props) => {
   return (
     <footer className="footer">
       <a className="logo footer-logo" href="/">
-        <img src="./assets/logo.png" alt="logo" />
+        <img src="../../assets/logo.png" alt="logo" />
       </a>
       <p>© 2025 Physics Society, IIT Delhi. All rights reserved.</p>
       <nav className="navbar">

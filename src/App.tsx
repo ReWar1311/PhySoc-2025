@@ -5,6 +5,7 @@ import Team from './pages/Team/Team'
 import Events from './pages/Events/Events'
 import Gallery from './pages/Gallery/Gallery'
 import BadGateway from './404/404'
+import EventPage from './pages/Event_page/event_page'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/ourteam" element={<Team />} />
       <Route path="/events" element={<Events/>} />
       <Route path="/gallery" element={<Gallery/>} />
+      <Route path='/event/:id' element={<EventPage/>} />
       <Route path="/*" element={<BadGateway/>} />
     </Routes>
     </>
