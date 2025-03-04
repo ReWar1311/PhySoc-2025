@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   };
 
   return (
-    <header>
+    <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <a href='/' className= 'logo'><img src={logo||logo2} alt="logo" /></a>
       <nav className={`navbar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className={`nav-links header-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -31,12 +31,14 @@ const Header: React.FC<HeaderProps> = (props) => {
             {!login && <li className='nav-item mobile-login'><a href='/login'><button  className='login-btn'>Login/Signup</button></a></li>}
         </ul>
       </nav>
-      <div className="hamburger-menu" onClick={toggleMobileMenu}>
-        <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
-        <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
-        <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
+        <div className="hamburger-menu" onClick={toggleMobileMenu} style={{ marginLeft: '10px' }}>
+          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+        </div>
       </div>
-      {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
     </header>
   )
 };
