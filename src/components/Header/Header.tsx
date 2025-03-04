@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header>
       <a href='/' className= 'logo'><img src={logo||logo2} alt="logo" /></a>
-      <nav className='navbar'>
+      <nav className={`navbar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className={`nav-links header-links ${mobileMenuOpen ? 'active' : ''}`}>
           {items.map((item, index) => (
             <li className='nav-item' key={index}>
