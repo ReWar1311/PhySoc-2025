@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = (props) => {
               </a>
             </li>
           ))}
-          {!login && <li className='nav-item mobile-login'><button className='login-btn'>Login/Signup</button></li>}
+            {!login && <li className='nav-item mobile-login'><a href='/login'><button  className='login-btn'>Login/Signup</button></a></li>}
         </ul>
       </nav>
       <div className="hamburger-menu" onClick={toggleMobileMenu}>
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
         <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
       </div>
-      {!login && <button className='login-btn desktop-login'>Login/Signup</button>}
+      {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
     </header>
   )
 };
