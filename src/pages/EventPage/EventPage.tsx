@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./EventPage.css"; // Import your CSS file for styling
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Variants } from "framer-motion";
+import StatusButton from "../../components/StatusButton/StatusButton";
+import InvitationCard from "../../components/InvitationCard/InvitationCard";
 
 const EventPage = () => {
   // Array of images for the carousel
@@ -11,6 +13,77 @@ const EventPage = () => {
     "../assets/event.jpg", // Replace with your actual image paths
     "../assets/event.jpg",
   ];
+
+  // Event details
+  const event = {
+    eventName: "Event Name",
+    eventDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt.",
+    eventDate: "DD/MM/YYYY",
+    eventDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt. Nullam nec purus nec eros ultricies tincidunt.",
+    registrationDeadline: "2025-03-07T23:59:59",
+
+  };
+
+  // Your team details
+  const yourTeam = {
+    teamName: "Team Name",
+    teamSlogan: "Slogan",
+    members: [
+      {
+        name: "You",
+        role: "Leader",
+        status: "Leader",
+        color: "#6e44ff",
+        image: "https://randomuser.me/api/portraits/men/64.jpg"
+      },
+      {
+        name: "Jake Paul",
+        role: "B.Tech 2nd Year",
+        status: "Pending",
+        color: "#ffa500",
+        image: "https://randomuser.me/api/portraits/men/64.jpg"
+      },
+      {
+        name: "Mike Tyson",
+        role: "B.Tech 4th Year",
+        status: "Rejected",
+        color: "#ff4d4d",
+        image: "https://randomuser.me/api/portraits/men/64.jpg"
+      },
+      {
+        name: "Mike Tyson",
+        role: "B.Tech 4th Year",
+        status: "Accepted",
+        color: "#4caf50",
+        image: "https://randomuser.me/api/portraits/men/64.jpg"
+      },
+    ],
+  };
+
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const targetDate = new Date(event.registrationDeadline);
+    const difference = targetDate.getTime() - now.getTime();
+
+    if (difference <= 0) return "Registration Closed";
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   // State to track the current image index and direction
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -89,14 +162,14 @@ const EventPage = () => {
 
             {/* Event Details */}
             <div className="event-details-container">
-              <h1 className="event-name">EVENT NAME</h1>
+              <h1 className="event-name">{event.eventName}</h1>
               <p className="event-description">
-                A small description about the event in one or two lines.
+                {event.eventDescription}
               </p>
-              <p className="event-date">Held on: DD/MM/YYYY</p>
+              <p className="event-date">Date: {event.eventDate}</p>
               <hr className="divider" />
               <p className="event-details">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {event.eventDetails}
               </p>
             </div>
           </div>
@@ -107,32 +180,26 @@ const EventPage = () => {
             {/* Timer and Create Team Button */}
             <div className="team-actions">
               <button className="create-team-btn">Make new team</button>
-              <span className="timer">00:00 until registration closes</span>
+              {timeLeft === "Registration Closed" || <span className="timer">{timeLeft} until registration closes</span>}
+              {timeLeft === "Registration Closed" && <p className="registration-closed">Registration Closed</p>}
             </div>
 
             {/* Your Teams Section */}
             <div className="your-teams">
               <h2>Your Team:</h2>
               <div className="team-card">
-                <h3>TEAM NAME (2/3)</h3>
-                <p>"This is a slogan"</p>
+                <h3>{yourTeam.teamName}</h3>
+                <p>{yourTeam.teamSlogan}</p>
                 <ul>
-                  <li>
-                    You - B.Tech 2nd Year{" "}
-                    <span className="badge leader-badge">Leader</span>
+                  {yourTeam.members.map((member) => (
+                    <li className="member-item">
+                    <div className="member-info">
+                      <img src={member.image} alt="profile" className="member-image" />
+                      <span>{member.name} - {member.role}</span>
+                    </div>
+                    <StatusButton status={member.status} color={member.color} />
                   </li>
-                  <li>
-                    Jake Paul - B.Tech 2nd Year{" "}
-                    <span className="badge pending-badge">Pending</span>
-                  </li>
-                  <li>
-                    Mike Tyson - B.Tech 4th Year{" "}
-                    <span className="badge rejected-badge">Rejected</span>
-                  </li>
-                  <li>
-                    Mike Tyson - B.Tech 4th Year{" "}
-                    <span className="badge accepted-badge">Accepted</span>
-                  </li>
+                  ))}
                 </ul>
                 <button className="delete-team-btn">Delete Team</button>
                 <button className="invite-members-btn">Invite Members</button>
@@ -142,31 +209,15 @@ const EventPage = () => {
             {/* Invitations Section */}
             <div className="invitations">
               <h2>Invitations:</h2>
-
-              {/* Invitation Card */}
-              <div className="invitation-card">
-                <p><b>Mike Tyson</b> invited you to join:</p>
-                <h3>TEAM NAME (1/3)</h3>
-                <p>"This is a slogan"</p>
-                <div className="invitation-actions">
-                  <button className="accept-btn">Accept</button>
-                  <button className="reject-btn">Reject</button>
-                </div>
-              </div>
-
-              {/* Rejected Invitation */}
-              <div className="invitation-card">
-                <p><b>Jake Paul</b> invited you to join:</p>
-                <h3>TEAM NAME (1/3)</h3>
-                <p>"This is a slogan"</p>
-                <span className="rejected-status">Rejected</span>
-              </div>
+              <InvitationCard name="John Doe" teamName="Team Name" message="This is a message" />
+              <InvitationCard name="John Doe" teamName="Team Name" message="This is a message" acceptedStatus={true} />
+              <InvitationCard name="John Doe" teamName="Team Name" message="This is a message" rejectedStatus={true} />
             </div>
           </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </div >
   );
 };
 

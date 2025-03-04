@@ -1,0 +1,75 @@
+.invitation-card {
+    background-color: #292929; /* Slightly lighter than the section background */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  .invitation-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3; /* Subtle text color for description */
+  }
+
+    .invitation-card b {
+        color: #6e44ff; /* Purple text for team name */
+    }
+  
+  .invitation-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text for team name */
+  }
+  
+  .invitation-card .invitation-actions {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+  }
+  
+  .invitation-card .accept-btn,
+  .invitation-card .reject-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .accept-btn {
+    background-color: #6e44ff; /* Purple button for accept action */
+    color: #ffffff;
+  }
+  
+  .accept-btn:hover {
+    background-color: #5a36cc; /* Slightly darker purple on hover */
+  }
+  
+  .reject-btn {
+    background-color: #ff4d4d; /* Red button for reject action */
+    color: #ffffff;
+  }
+  
+  .reject-btn:hover {
+    background-color: #cc3c3c; /* Slightly darker red on hover */
+  }
+
+  /* Rejected Status */
+  .rejected-status {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ff4d4d; /* Red background for rejected status */
+    color: #ffffff; /* White text for rejected status */
+  }
+
+    /* Accepted Status */
+    .accepted-status {
+        display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: green; /* Green background for accepted status */
+    color: #ffffff; /* White text for accepted status */
+  }
