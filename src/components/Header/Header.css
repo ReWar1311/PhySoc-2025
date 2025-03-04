@@ -133,26 +133,33 @@ header{
         margin: 25px 15px;
     }
     .header-links{
-        display: none;
         position: absolute;
         flex-direction: column;
         background-color: var(--bg75prctg);
         backdrop-filter: blur(8px);
         top: 100%;
-        right: -100%;
-        width: 80%;
+        right: 0;
+        width: 100%;
         height: auto;
         padding: 20px 0;
         border-radius: 0 0 14px 14px;
-        transition: right 0.3s ease-in-out;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         border: var(--boarder);
         border-top: none;
         z-index: 1000;
+        
+        /* Transition properties */
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     }
     
-    .header-links.active {
-        right: 0;
+    .navbar.mobile-open .header-links.active {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
     
     .nav-item {
