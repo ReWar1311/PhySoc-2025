@@ -1,4 +1,5 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Alert from '../../components/Alert/Alert';
@@ -27,7 +28,9 @@ const Home: React.FC = () => {
               deduction"
             </div>
             <div style={{ height: "20px" }}></div>
-            <MainButton link=''/>
+            <div className="button-group">
+              <MainButton link=''/>
+            </div>
           </div>
         </div>
       </div>

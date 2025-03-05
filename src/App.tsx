@@ -6,6 +6,9 @@ import Events from './pages/Events/Events'
 import Gallery from './pages/Gallery/Gallery'
 import BadGateway from './404/404'
 import EventPage from './pages/EventPage/EventPage'
+import Login from './pages/Login/Login'
+import Signup from './pages/Signup/Signup'
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword'
 
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
       <Route path="/events" element={<Events/>} />
       <Route path="/gallery" element={<Gallery/>} />
       <Route path='/event/:id' element={<EventPage/>} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/*" element={<BadGateway/>} />
     </Routes>
     </>

@@ -78,9 +78,36 @@
     justify-content: center;
 }
 
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+    pointer-events: auto;
+}
 
+.auth-button {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    height: 45px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-
+.auth-button:hover {
+    background-color: var(--primary50);
+    transform: translateY(-2px);
+}
 
 @media screen and (max-width: 600px){
     .home-heading{
@@ -100,5 +127,15 @@
         /* background-position: right; */
     }
 
-    
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .auth-button {
+        font-size: 12px;
+        padding: 0 20px;
+        height: 40px;
+    }
 }
