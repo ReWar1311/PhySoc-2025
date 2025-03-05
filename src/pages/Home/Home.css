@@ -82,7 +82,7 @@
     display: flex;
     gap: 15px;
     margin-top: 30px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     pointer-events: auto;
 }
 
@@ -126,12 +126,12 @@
         margin-top: 0px;
         /* background-position: right; */
     }
-
+/* 
     .button-group {
         flex-direction: column;
         width: 100%;
         gap: 10px;
-    }
+    } */
 
     .auth-button {
         font-size: 12px;
