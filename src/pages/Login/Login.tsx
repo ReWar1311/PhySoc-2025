@@ -24,9 +24,9 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-page-container">
-      <div className="grid-elem"></div>
-      <Grids />
-      <div className="home">
+      <div className="grid-elem-login"><Grids /></div>
+      
+      <div className="login-home">
         <Header />
         <div className="login-container">
           <div className="login-card">
@@ -68,8 +68,8 @@ const Login: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 };

@@ -24,9 +24,9 @@ const Signup: React.FC = () => {
 
   return (
     <div className="signup-page-container">
-      <div className="grid-elem"></div>
-      <Grids />
-      <div className="home">
+      <div className="grid-elem-login">      <Grids /></div>
+
+      <div className="login-home">
         <Header />
         <div className="signup-container">
           <div className="signup-card">
@@ -81,8 +81,8 @@ const Signup: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 };

@@ -27,9 +27,9 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <div className="forgot-password-page-container">
-      <div className="grid-elem"></div>
-      <Grids />
-      <div className="home">
+      <div className="grid-elem-login"> <Grids /></div>
+
+      <div className="login-home">
         <Header />
         <div className="forgot-password-container">
           <div className="forgot-password-card">
@@ -74,8 +74,8 @@ const ForgotPassword: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 };
