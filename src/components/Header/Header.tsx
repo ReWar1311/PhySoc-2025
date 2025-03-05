@@ -17,7 +17,22 @@ const Header: React.FC<HeaderProps> = (props) => {
   };
 
   return (
-    <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <>
+    <div 
+      onClick={() => setMobileMenuOpen(false)}
+      style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgb(0, 0, 0, 0.5)',
+      display: mobileMenuOpen ? 'block' : 'none',
+      pointerEvents: 'all',
+      zIndex: 998
+      }}
+    ></div>
+    <header className={`${mobileMenuOpen ? 'header-mobile-open' : ''}`}>
       <a href='/' className= 'logo'><img src={logo||logo2} alt="logo" /></a>
       <nav className={`navbar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className={`nav-links header-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -40,6 +55,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         </div>
       </div>
     </header>
+    </>
   )
 };
 

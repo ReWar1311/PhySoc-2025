@@ -17,6 +17,9 @@ header{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+.header-mobile-open{
+    border-radius: 14px 14px 0 0;
+}
 
 
 .nav-links{
@@ -82,6 +85,11 @@ header{
     padding: 2px 15px;
     margin-right: 16px;
 }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .login-btn:hover{
     background-color: var(--primary50);
     box-shadow: 0px 0px 6px 3px var(--secondary50) inset;
@@ -130,7 +138,7 @@ header{
 @media screen and (max-width: 600px){
     header{
         max-width: 100%;
-        margin: 25px 15px;
+        margin: 25px 15px ;
     }
     .header-links{
         position: absolute;
@@ -138,7 +146,7 @@ header{
         background-color: var(--bg75prctg);
         backdrop-filter: blur(8px);
         top: 100%;
-        right: 0;
+        margin-top: 0;
         width: 100%;
         height: auto;
         padding: 20px 0;
