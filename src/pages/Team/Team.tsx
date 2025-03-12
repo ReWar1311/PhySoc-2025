@@ -1,6 +1,4 @@
 import './Team.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import TeamCard from '../../components/TeamCard/TeamCard';
 import { IconName } from '../../common/types/types';
 
@@ -58,7 +56,6 @@ const Team: React.FC = () => {
   return (
 <div className="team">
       <div className="team-bg">
-        <Header />
         <div className="Heading">Faculty Coordinators:</div>
         <div className="team-cards">
           {team.filter(member => member.role === 'Faculty').map((member, index) => (
@@ -83,7 +80,6 @@ const Team: React.FC = () => {
                      <TeamCard key={index} name={member.name} role={member.role} image={member.image} />
           ))}
         </div>
-        <Footer />
       </div>
     </div>
   );

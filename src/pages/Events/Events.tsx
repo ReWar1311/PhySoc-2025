@@ -1,6 +1,4 @@
 import "./Events.css";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import event from "../../assets/event.jpg";
 import { Card } from "../../components/Card/card";
 
@@ -69,7 +67,6 @@ const Events: React.FC = () => {
   return (
     <div className="event">
       <div className="event-bg">
-        <Header />
         <div className="Heading">Upcoming</div>
         <div className="event-cards upcoming-cards">
             {eventData.filter(event => event.date && new Date(event.date) >= new Date()).map((event) => (
@@ -110,7 +107,6 @@ const Events: React.FC = () => {
             />
           ))}
         </div>
-        <Footer />
       </div>
     </div>
   );

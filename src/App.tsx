@@ -9,6 +9,8 @@ import EventPage from './pages/EventPage/EventPage'
 import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup'
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
     <>
       {/* <Home /> */}
       {/* <Events /> */}
+      <Header />
     <Routes>
     <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
@@ -29,6 +32,7 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/*" element={<BadGateway/>} />
     </Routes>
+    <Footer />
     </>
   )
 }

@@ -1,10 +1,11 @@
 .home{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 110px);
     top: 0;
     left: auto;
     right: auto;
+    overflow-x: hidden;
     pointer-events: none;
     z-index: 2;
 }
@@ -12,6 +13,7 @@
 .grid-elem{
     position: absolute;
     width: 100%;
+    top: 0;
     height: 100vh;
     background-image: url("../../assets/image.png");
     background-size: cover;

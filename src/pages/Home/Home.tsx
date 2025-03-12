@@ -1,7 +1,4 @@
 import './Home.css';
-// import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import Alert from '../../components/Alert/Alert';
 import Grids from '../../components/Grids/Grids';
 import MainButton from '../../components/MainButton/MainButton';
@@ -12,7 +9,6 @@ const Home: React.FC = () => {
       <div className="grid-elem"></div>
       <Grids />
       <div className="home">
-        <Header />
         <div className="home-bg">
           <div className="home-content">
             <Alert
@@ -35,7 +31,6 @@ const Home: React.FC = () => {
         </div>
       </div>
       
-        <Footer />
     </div>
   );
 };

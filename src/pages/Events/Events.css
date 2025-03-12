@@ -1,8 +1,5 @@
 .event-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+
     width: 100%;
     /* background-image: linear-gradient(to bottom right, 
     rgb(0, 0, 0) 0%,

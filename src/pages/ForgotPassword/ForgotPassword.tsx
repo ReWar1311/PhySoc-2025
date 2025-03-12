@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ForgotPassword.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import Grids from '../../components/Grids/Grids';
+// import Grids from '../../components/Grids/Grids';
 
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -27,10 +25,9 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <div className="forgot-password-page-container">
-      <div className="grid-elem-login"> <Grids /></div>
+      {/* <div className="grid-elem-login"> <Grids /></div> */}
 
       <div className="login-home">
-        <Header />
         <div className="forgot-password-container">
           <div className="forgot-password-card">
             {!isSubmitted ? (
@@ -75,7 +72,6 @@ const ForgotPassword: React.FC = () => {
           </div>
         </div>
       </div>
-        <Footer />
     </div>
   );
 };

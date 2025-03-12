@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import './Gallery.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 
 import event1 from "../../assets/event.jpg";
 import event2 from "../../assets/event.jpg";
@@ -46,7 +44,6 @@ const Gallery = () => {
 
   return (
     <div className="gallery">
-      <Header />
     <div className="carousel-container">
       <div className="carousel-images">
         <div className={`carousel-image previous ${direction === 'prev' ? 'slide-in-side-left' : ''}`}
@@ -74,7 +71,6 @@ const Gallery = () => {
         <button onClick={handleNext} className="carousel-button right">&#9654;</button>
       </div>
     </div>
-    <Footer />
     </div>
   );
 };

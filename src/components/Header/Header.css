@@ -10,12 +10,12 @@ header{
     justify-content: space-between;
     border-radius: 14px;
     border: var(--boarder);
+    position: relative;
     font-size: 13px;
     pointer-events: all;
     z-index: 1000;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 .header-mobile-open{
     border-radius: 14px 14px 0 0;

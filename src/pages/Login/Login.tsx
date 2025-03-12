@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import Grids from '../../components/Grids/Grids';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -24,10 +21,9 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-page-container">
-      <div className="grid-elem-login"><Grids /></div>
+      {/* <div className="grid-elem-login"><Grids /></div> */}
       
       <div className="login-home">
-        <Header />
         <div className="login-container">
           <div className="login-card">
             <h2>Login</h2>
@@ -69,7 +65,6 @@ const Login: React.FC = () => {
           </div>
         </div>
       </div>
-        <Footer />
     </div>
   );
 };
