@@ -1,18 +1,26 @@
 /* General Styling */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #121212;
   color: #fff;
 }
 
-/* Mobile-First Layout */
-.event-page {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+.event-date{
+  color: #FFF;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.625rem; /* 130% */
+letter-spacing: -0.00013rem;
 }
 
+.event-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 /* Navigation Button */
 .login-btn {
   background-color: #6e44ff;
@@ -25,71 +33,146 @@ body {
 /* Main Content Layout */
 .main-content {
   display: flex;
-  flex-direction: column; /* Stack on mobile */
-  gap: 20px;
+  flex-direction: row;
+  gap: 10px;
+  width: 80%;
+  justify-content: center;
 }
+
 
 /* Left Section (Larger Screens) */
 .left-section {
-  width: 100%; /* Take full width on mobile */
-  padding: 15px;
+  width: 55.3125rem;
+  height: 74.5625rem;
+  background: #101010;
+  margin-top: 50px;
 }
 
 /* Carousel */
 .carousel {
-  position: relative;
-  margin-bottom: 15px;
+  width: 30.75rem;
+  height: 21.5625rem;
+  flex-shrink: 0;
+  border-radius: 0.4375rem;
 }
 
 .event-image {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.4375rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  /* Prevents stretching */
+}
+
+.image-container {
+  position: relative;
+  border-radius: 0.4375rem;
+  width: 500px;
+  /* Set the desired width */
+  height: 300px;
+  /* Set the desired height */
+  overflow: hidden;
+  /* Ensures the image stays within bounds */
 }
 
 /* Navigation Buttons */
 .prev-btn,
 .next-btn {
+  all: unset;
+  /* Resets all inherited styles */
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
+  top: 82.5%;
+  background-color: transparent;
   color: white;
-  border: none;
-  padding: 10px;
-  font-size: 1.2rem;
+  border: 2px solid white;
+  font-size: 1.4rem;
+  font-weight: bolder;
   cursor: pointer;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 2.25688rem;
+  height: 2.5rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.prev-btn { left: 5px; }
-.next-btn { right: 5px; }
+.dots-container {
+  position: absolute;
+  top: 90%;
+  /* Adjust as needed */
+  left: 38%;
+  display: flex;
+  gap: 8px;
+  /* Space between dots */
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: gray;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.3);
+  /* Slightly enlarge the active dot */
+}
+
+.prev-btn {
+  left: 25%;
+}
+
+.next-btn {
+  left: 67%;
+}
+
+.prev-btn,
+.next-btn {
+  transition: background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out,
+    transform 200ms ease-in-out;
+}
 
 .prev-btn:hover,
 .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #6400FF;
+  border-color: #6400FF;
+  box-shadow: 0 0 10px #6400FF;
+  transform: scale(1.2);
 }
 
 /* Event Details */
 .event-details-container {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  width: 35.3125rem;
+  height: 64.5625rem;
+  flex-shrink: 0;
+  background: #101010;
 }
 
 .event-name {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ffffff;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+  /* 72.222% */
+  letter-spacing: -0.00025rem;
 }
 
 .event-description {
-  font-size: 1rem;
-  color: #b3b3b3;
+  width: 30.0625rem;
+  color: #8B8A8A;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 108.333% */
+  letter-spacing: -0.00013rem;
 }
 
 /* Divider */
@@ -101,32 +184,38 @@ body {
 
 /* Event Details */
 .event-details {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d9d9d9;
+  width: 30.0625rem;
+  color: #B4B3B3;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.9375rem;
+  /* 129.167% */
+  letter-spacing: 0.105rem;
 }
 
 /* Your Teams Section */
 .your-teams {
-  margin-top: 20px;
   padding: 15px;
-  background-color: #1e1e1e;
+  background-color: #101010;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .your-teams h2 {
+  margin-left:-15px;
   font-size: 1.3rem;
   color: #ffffff;
 }
 
 /* Team Cards */
 .team-card {
-  background-color: #292929;
-  border: 1px solid #444;
-  border-radius: 10px;
+  width: 31.4375rem;
+  height: 30.125rem;
+  border-radius: 0.3125rem;
+  background: #1A1A1A;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .team-card h3 {
@@ -154,20 +243,72 @@ body {
   font-weight: bold;
 }
 
+.your-teams h3 {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+  /* 108.333% */
+}
+
 /* Buttons */
-.delete-team-btn,
 .invite-members-btn {
-  display: inline-block;
-  padding: 8px 12px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 0.9rem;
-  margin-right: 10px;
+  width: 31.675rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background: #6301FC;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 130% */
+  letter-spacing: -0.00013rem;
 }
 
 .delete-team-btn {
-  background-color: #ff4d4d;
+  display: flex;
+  background-color: transparent;
+  width: 10.5625rem;
+  height: 1.4375rem;
+  justify-content: right;
+  flex-shrink: 0;
+  color: #F00;
+  font-family: Inter;
+  font-size: 0.775rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 185.714% */
+  letter-spacing: -0.00006rem;
+  border: none;
+  margin-top: 25px;
+}
+
+.memname {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 162.5% */
+  letter-spacing: -0.00013rem;
+}
+
+.role {
+  color: #828282;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 185.714% */
+  letter-spacing: -0.00006rem;
 }
 
 .invite-members-btn {
@@ -186,9 +327,11 @@ body {
 
 /* Right Section */
 .right-section {
-  width: 100%; /* Full width on mobile */
+  margin-top: 20px;
+  width: 50rem;
+  /* Full width on mobile */
   padding: 15px;
-  background-color: #1e1e1e;
+  background-color: #101010;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -196,19 +339,31 @@ body {
 /* Timer & Create Team Button */
 .team-actions {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  margin-left: 15px
 }
 
 .create-team-btn {
-  background-color: #6e44ff;
-  color: #fff;
+  width: 11.625rem;
+  height: 2.8125rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background: #6301FC;
   border: none;
-  border-radius: 6px;
   padding: 10px 15px;
   font-size: 1rem;
   cursor: pointer;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 130% */
+  letter-spacing: -0.00013rem;
 }
 
 .create-team-btn:hover {
@@ -218,7 +373,7 @@ body {
 .timer {
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #ff4d4d;
+  color: rgba(255, 255, 255, 0.56);
 }
 
 /* Member List */
@@ -237,20 +392,45 @@ body {
 }
 
 .member-image {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 
 /* Make Responsive */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .main-content {
-    flex-direction: row;
+    flex-direction: column;
   }
+
   .left-section {
-    width: 65%;
+    width: 45%;
+    margin-left: 3%;
   }
+
+  .event-description {
+    width: 70%;
+  }
+
+  .event-details {
+    width: 70%;
+  }
+
+  .dots-container {
+    top: 87.5%;
+    left: 37.5%;
+  }
+
   .right-section {
-    width: 35%;
+    width: 92.5%;
+  }
+
+  .image-container {
+    width: 82%;
+    height: 350px;
+  }
+
+  .team-actions {
+    flex-direction: column;
   }
 }
