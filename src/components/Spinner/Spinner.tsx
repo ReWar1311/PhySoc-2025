@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './spinner.css';
+import './Spinner.css';
 
 type Props = {
   size?: number;
