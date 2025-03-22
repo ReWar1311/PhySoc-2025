@@ -10,7 +10,5 @@ type IconName =
   | 'skype'
   | 'telegram'
   | 'google-maps'
-  | 'instagram'
-  | 'other'
 
 export { type IconName };

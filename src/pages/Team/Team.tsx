@@ -16,7 +16,7 @@ const Team: React.FC = () => {
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1pEccUAPO8si10wK7Lco2QwBhPm9jmtt5&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/tanur_kumar?igsh=eWF6eWZ4ZWNvZTJo" },
+        { name: "externalLink", link: "https://www.instagram.com/tanur_kumar?igsh=eWF6eWZ4ZWNvZTJo" },
         { name: "mail", link: "tkumar7632@gmail.com" }
       ]
     },
@@ -53,7 +53,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/bhupendra-973453256/" },
         { name: "mail", link: "bhupendra2jat@gmail.com" },
-        { name: "instagram", link: "https://www.instagram.com/teenu.2.7/" }
+        { name: "externalLink", link: "https://www.instagram.com/teenu.2.7/" }
       ]
     },
     {
@@ -61,7 +61,7 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=17EVykU-GMCCfB4joWQXQkhX7APBlTUCg&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/siddharth_606_?igsh=NXI5M2h5cXY2dDdr" }
+        { name: "externalLink", link: "https://www.instagram.com/siddharth_606_?igsh=NXI5M2h5cXY2dDdr" }
       ]
     },
     {
@@ -78,8 +78,8 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1i25xMNAWXluVk_4RASbxuBzKLZSsoA0c&sz=w1000",
       socials: [
         { name: "mail", link: "shreevijay281@gmail.com" },
-        { name: "other", link: "_vijayshree_7" },
-        { name: "other", link: "Vijay Shree Sheoran" }
+        { name: "externalLink", link: "_vijayshree_7" },
+        { name: "externalLink", link: "Vijay Shree Sheoran" }
       ]
     },
     {
@@ -88,7 +88,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1BNyqpU_WGffkZw0px0iuaOVZPegeF7S5&sz=w1000",
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/krishnan-kundan-332690326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "instagram", link: "https://www.instagram.com/krishnan1405s?igsh=N2Frdnc5enA1dWYx" },
+        { name: "externalLink", link: "https://www.instagram.com/krishnan1405s?igsh=N2Frdnc5enA1dWYx" },
         { name: "mail", link: "phs247191@iitd.ac.in" }
       ]
     },
@@ -97,7 +97,7 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1_lw3WuJcZAcN8NvCW_0M_iX7o7pDb47m&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/___debraj?igsh=YzljYTk1ODg3Zg==" },
+        { name: "externalLink", link: "https://www.instagram.com/___debraj?igsh=YzljYTk1ODg3Zg==" },
         { name: "linkedIn", link: "https://www.linkedin.com/in/debraj-singha-4a3a97249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "mail", link: "phs247135@physics.iitd.ac.in" }
       ]
@@ -117,7 +117,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/manogya-singh-suryansh-196305217" },
         { name: "github", link: "https://github.com/manogyasingh" },
-        { name: "instagram", link: "instagram.com/_manogyasingh" }
+        { name: "externalLink", link: "instagram.com/_manogyasingh" }
       ]
     },
     {
@@ -126,7 +126,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1pd9LD0YmN6AZSehF6O8Kai087PW3i6lR&sz=w1000",
       socials: [
         { name: "mail", link: "phs247146@physics.iitd.ac.in" },
-        { name: "instagram", link: "Instagram: @y.shi_v_ts" }
+        { name: "externalLink", link: "Instagram: @y.shi_v_ts" }
       ]
     },
     {
@@ -143,7 +143,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1Pq29bFFO9k3Ldcl8k69AThDrsNjWVle7&sz=w1000",
       socials: [
         { name: "github", link: "https://github.com/Sahilcreate" },
-        { name: "instagram", link: "https://www.instagram.com/sahilindeadshade/" }
+        { name: "externalLink", link: "https://www.instagram.com/sahilindeadshade/" }
       ]
     },
     {
@@ -151,7 +151,7 @@ const Team: React.FC = () => {
       role: "OC",
       image: "https://drive.google.com/thumbnail?id=1V1qxnmkVzG6WzUVDSLSH9PBTVeQj55G3&sz=w1000",
       socials: [
-        { name: "other", link: "Thegpsingh_09" },
+        { name: "externalLink", link: "Thegpsingh_09" },
         { name: "linkedIn", link: "linkedin.com/in/gaganpratapsingh" }
       ]
     },
@@ -160,9 +160,9 @@ const Team: React.FC = () => {
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1ip9Waw-YYvPvDnevQpmey0xQtYmvgjU5&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/asishh0_0/" },
+        { name: "externalLink", link: "https://www.instagram.com/asishh0_0/" },
         { name: "linkedIn", link: "https://www.linkedin.com/in/ashish-meena-b7202a25a/" },
-        { name: "other", link: "Convenor" }
+        { name: "externalLink", link: "Convenor" }
       ]
     },
     {
@@ -178,7 +178,7 @@ const Team: React.FC = () => {
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1H8qP-jmISWtksRZ_2YVomVSX1oR_r6AD&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/kashish._171/" }
+        { name: "externalLink", link: "https://www.instagram.com/kashish._171/" }
       ]
     },
     {
@@ -186,7 +186,7 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1dztZTTCFhY6zS4WRiCm8oAn1yHlSRM3Y&sz=w1000",
       socials: [
-        { name: "other", link: "@aryansingh.co" },
+        { name: "externalLink", link: "@aryansingh.co" },
         { name: "mail", link: "5551112deo@gmail.com" }
       ]
     },
@@ -195,7 +195,7 @@ const Team: React.FC = () => {
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1hUPpjP6nOJvb6mfmnVQB3LMs9-R9qYsA&sz=w1000",
       socials: [
-        { name: "instagram", link: "https://www.instagram.com/ritu_m37/profilecard/?igsh=eHYza2VvcGY4Y2o3" }
+        { name: "externalLink", link: "https://www.instagram.com/ritu_m37/profilecard/?igsh=eHYza2VvcGY4Y2o3" }
       ]
     }
   ];
