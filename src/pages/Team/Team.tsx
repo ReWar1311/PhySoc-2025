@@ -74,7 +74,7 @@ const Team: React.FC = () => {
     },
     {
       name: "Vijay Shree",
-      role: "OC",
+      role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1i25xMNAWXluVk_4RASbxuBzKLZSsoA0c&sz=w1000",
       socials: [
         { name: "mail", link: "shreevijay281@gmail.com" },
