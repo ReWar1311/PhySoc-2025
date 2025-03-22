@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Header.css';
 import logo2 from '../../assets/logo.png';
+import Cookies from 'js-cookie';
 
 interface HeaderProps {
   items?: string[];
@@ -9,9 +10,26 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { items =['Home', 'Gallery', 'Events', 'Our Team'] , logo, login } = props;
+  const { items =['Home', 'Gallery', 'Events', 'Our Team'] , logo } = props;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [login, setLogin] = useState(false);
+  useEffect(() => {
+    try {
+      const token = Cookies.get('auth_token');
+      console.log('Checking cookie:', token);
+      if (token && token !== 'undefined') {
+        console.log('token found:', token);
+        setLogin(true);
+      } else {
+        console.log('no valid token');
+        setLogin(false);
+      }
+    } catch (error) {
+      console.error('Error reading cookie:', error);
+      setLogin(false);
+    }
+  }, []); 
+  
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -44,10 +62,12 @@ const Header: React.FC<HeaderProps> = (props) => {
             </li>
           ))}
             {!login && <li className='nav-item mobile-login'><a href='/login'><button  className='login-btn'>Login/Signup</button></a></li>}
+            {login && <li className='nav-item mobile-login'><a href='/profile'><button  className='login-btn'>Profile</button></a></li>}
         </ul>
       </nav>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
+        {login && <a href='/profile'><button className='login-btn desktop-login'>Profile</button></a>}
         <div className="hamburger-menu" onClick={toggleMobileMenu} style={{ marginLeft: '10px' }}>
           <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
           <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>

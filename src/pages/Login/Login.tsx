@@ -1,27 +1,55 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './Login.css';
+import api from '../../services/api';
+import { Toast } from '../../components/Toast/Toast';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      // Handle login logic here
-      console.log('Login attempt with:', { email, password });
+    try {
+      const response = await api.auth.signIn({ user_name: email, password });
+      
+      if (response.data.success) {
+        if (response.data.token) {
+          localStorage.setItem('auth_token', response.data.token);
+        }
+        
+        toast.success('Login successful!');
+        
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 1000);
+      } else {
+        toast.error(response.data.message || 'Login failed. Please check your credentials.');
+      }
+    } catch (error: any) {
+      console.error('Login error:', error);
+      
+      if (error.response) {
+        const message = error.response.data?.message || 'Invalid credentials';
+        toast.error(`Login failed: ${message}`);
+      } else if (error.request) {
+        toast.error('No response from server. Please try again later.');
+      } else {
+        toast.error('Login failed. Please try again.');
+      }
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
     <div className="login-page-container">
-      {/* <div className="grid-elem-login"><Grids /></div> */}
+      <Toast />
       
       <div className="login-home">
         <div className="login-container">
@@ -29,9 +57,9 @@ const Login: React.FC = () => {
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Username</label>
                 <input
-                  type="email"
+                  type="username"
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
