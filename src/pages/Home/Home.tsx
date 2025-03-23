@@ -13,8 +13,8 @@ const Home: React.FC = () => {
           <div className="home-content">
             <Alert
               type="NEW"
-              message="Freshers party forms out now"
-              link="https://linksho.vercel.app/link/24"
+              message="Resonance website is live now"
+              link="https://resonance.physociitd.in"
               className="alert-full"
             />
             <div className="home-heading">PhySoc</div>
