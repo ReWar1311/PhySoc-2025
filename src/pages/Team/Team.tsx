@@ -17,9 +17,9 @@ const Team: React.FC = () => {
       image: "https://physics.iitd.ac.in/images/faculty/faculty_LPfUJGc6AK.jpg",
     },
     {
-      name: "Prashant Rwear",
+      name: "Prashant Rewar",
       role: "Coordinator",
-      image: "/src/assets/rewar.png",
+      image: "/public/rewar.png",
     },
     {
       name: "Tarun Kumar",
@@ -27,7 +27,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1pEccUAPO8si10wK7Lco2QwBhPm9jmtt5&sz=w1000",
       socials: [
         { name: "externalLink", link: "https://www.instagram.com/tanur_kumar?igsh=eWF6eWZ4ZWNvZTJo" },
-        { name: "mail", link: "tkumar7632@gmail.com" }
+        { name: "mail", link: "mailto:tkumar7632@gmail.com" }
       ]
     },
     {
@@ -45,7 +45,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/sthitapragyan-mallick-192a81284" },
         { name: "github", link: "https://github.com/sthitapragyan001" },
-        { name: "mail", link: "sthitapragyanmallick@outlook.com" }
+        { name: "mail", link: "mailto:sthitapragyanmallick@outlook.com" }
       ]
     },
     {
@@ -53,7 +53,7 @@ const Team: React.FC = () => {
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1S0Igh5Yu_pdRGpyf6ePdhIV6SBgWsrwO&sz=w1000",
       socials: [
-        { name: "mail", link: "parthjoshi361@gmail.com" }
+        { name: "mail", link: "mailto:parthjoshi361@gmail.com" }
       ]
     },
     {
@@ -62,7 +62,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=12WewksXKDPEhIinQaEuvTff_VDEawixf&sz=w1000",
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/bhupendra-973453256/" },
-        { name: "mail", link: "bhupendra2jat@gmail.com" },
+        { name: "mail", link: "mailto:bhupendra2jat@gmail.com" },
         { name: "externalLink", link: "https://www.instagram.com/teenu.2.7/" }
       ]
     },
@@ -87,9 +87,8 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1i25xMNAWXluVk_4RASbxuBzKLZSsoA0c&sz=w1000",
       socials: [
-        { name: "mail", link: "shreevijay281@gmail.com" },
-        { name: "externalLink", link: "_vijayshree_7" },
-        { name: "externalLink", link: "Vijay Shree Sheoran" }
+        { name: "mail", link: "mailto:shreevijay281@gmail.com" },
+        { name: "externalLink", link: "https://instagram.com/_vijayshree_7" }
       ]
     },
     {
@@ -99,7 +98,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/krishnan-kundan-332690326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "externalLink", link: "https://www.instagram.com/krishnan1405s?igsh=N2Frdnc5enA1dWYx" },
-        { name: "mail", link: "phs247191@iitd.ac.in" }
+        { name: "mail", link: "mailto:phs247191@iitd.ac.in" }
       ]
     },
     {
@@ -109,7 +108,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "externalLink", link: "https://www.instagram.com/___debraj?igsh=YzljYTk1ODg3Zg==" },
         { name: "linkedIn", link: "https://www.linkedin.com/in/debraj-singha-4a3a97249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "mail", link: "phs247135@physics.iitd.ac.in" }
+        { name: "mail", link: "mailto:phs247135@physics.iitd.ac.in" }
       ]
     },
     {
@@ -117,7 +116,7 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=13VH4RCp6MaUlJ8IV-uLjLIuyIapfjzbz&sz=w1000",
       socials: [
-        { name: "linkedIn", link: "www.linkedin.com/in/manas-pratap-singh21" }
+        { name: "linkedIn", link: "https://www.linkedin.com/in/manas-pratap-singh21" }
       ]
     },
     {
@@ -127,7 +126,7 @@ const Team: React.FC = () => {
       socials: [
         { name: "linkedIn", link: "https://www.linkedin.com/in/manogya-singh-suryansh-196305217" },
         { name: "github", link: "https://github.com/manogyasingh" },
-        { name: "externalLink", link: "instagram.com/_manogyasingh" }
+        { name: "externalLink", link: "https://instagram.com/_manogyasingh" }
       ]
     },
     {
@@ -135,8 +134,8 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1pd9LD0YmN6AZSehF6O8Kai087PW3i6lR&sz=w1000",
       socials: [
-        { name: "mail", link: "phs247146@physics.iitd.ac.in" },
-        { name: "externalLink", link: "Instagram: @y.shi_v_ts" }
+        { name: "mail", link: "mailto:phs247146@physics.iitd.ac.in" },
+        { name: "externalLink", link: "https://instagram.com/y.shi_v_ts" }
       ]
     },
     {
@@ -161,8 +160,8 @@ const Team: React.FC = () => {
       role: "OC",
       image: "https://drive.google.com/thumbnail?id=1V1qxnmkVzG6WzUVDSLSH9PBTVeQj55G3&sz=w1000",
       socials: [
-        { name: "externalLink", link: "Thegpsingh_09" },
-        { name: "linkedIn", link: "linkedin.com/in/gaganpratapsingh" }
+        { name: "externalLink", link: "https://instagram.com/thegpsingh_09" },
+        { name: "linkedIn", link: "https://linkedin.com/in/gaganpratapsingh" }
       ]
     },
     {
@@ -171,8 +170,7 @@ const Team: React.FC = () => {
       image: "https://drive.google.com/thumbnail?id=1ip9Waw-YYvPvDnevQpmey0xQtYmvgjU5&sz=w1000",
       socials: [
         { name: "externalLink", link: "https://www.instagram.com/asishh0_0/" },
-        { name: "linkedIn", link: "https://www.linkedin.com/in/ashish-meena-b7202a25a/" },
-        { name: "externalLink", link: "Convenor" }
+        { name: "linkedIn", link: "https://www.linkedin.com/in/ashish-meena-b7202a25a/" }
       ]
     },
     {
@@ -180,7 +178,7 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1dnzG3rd_lS9YKrS-mKMnJS4lUxLWAnAm&sz=w1000",
       socials: [
-        { name: "mail", link: "poojakumarisheshma@gmail.com" }
+        { name: "mail", link: "mailto:poojakumarisheshma@gmail.com" }
       ]
     },
     {
@@ -196,8 +194,8 @@ const Team: React.FC = () => {
       role: "Executive",
       image: "https://drive.google.com/thumbnail?id=1dztZTTCFhY6zS4WRiCm8oAn1yHlSRM3Y&sz=w1000",
       socials: [
-        { name: "externalLink", link: "@aryansingh.co" },
-        { name: "mail", link: "5551112deo@gmail.com" }
+        { name: "externalLink", link: "https://instagram.com/aryansingh.co" },
+        { name: "mail", link: "mailto:5551112deo@gmail.com" }
       ]
     },
     {
