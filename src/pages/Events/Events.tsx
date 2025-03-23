@@ -56,8 +56,8 @@ const Events: React.FC = () => {
       image: "/events/sl.png",
       description:
         "Student-Teacher Interaction Lunch by Physoc! Students and professors connect in an informal setting. Lively discussions and knowledge-sharing.",
-      instagramUrl: "Instagram",
-      date: "08/08/2025",
+      instagramUrl: "https://www.instagram.com/p/DCOfrjoTFS4/?img_index=1",
+      date: "08/08/2024",
       topics: ["STIC Lunch", "Student-Teacher Interaction", "Physics"],
     },
     {
@@ -75,7 +75,7 @@ const Events: React.FC = () => {
       description:
         "Present your game-changing idea on futuristic technologies! Submission Deadline: 2nd March. Top ideas advance to Tryst, IIT Delhi!",
       instagramUrl: "https://www.instagram.com/p/DGvw9dJswey/",
-      date: "03/02/2024",
+      date: "03/02/2025",
       topics: ["Future Tech", "Showcase", "Technology"],
     },
     {
@@ -84,7 +84,7 @@ const Events: React.FC = () => {
       description:
         "PhySoc’s annual fest! A 3-day adventure with cultural, sports, and fun games. Dates: 28-30 March.",
       instagramUrl: "https://www.instagram.com/p/DG2LsOTylCt/",
-      date: "03/28/2024",
+      date: "03/28/2025",
       topics: ["Resonance", "Annual Fest", "Physics"],
     },
   ];
