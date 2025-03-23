@@ -89,49 +89,84 @@ const Events: React.FC = () => {
       topics: ["Resonance", "Annual Fest", "Physics"],
     },
   ];
+
+  // Create filtered and sorted arrays
+  const today = new Date();
+  
+  const upcomingEvents = eventData
+    .filter(event => event.date && new Date(event.date) >= today)
+    .sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime());
+
+  const futureEvents = eventData.filter(event => !event.date || event.date === "");
+
+  const pastEvents = eventData
+    .filter(event => event.date && new Date(event.date) < today)
+    .sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime());
+
   return (
     <div className="event">
       <div className="event-bg">
-        <div className="Heading">Upcoming</div>
-        <div className="event-cards upcoming-cards">
-            {eventData.filter(event => event.date && new Date(event.date) >= new Date()).map((event) => (
-            <Card
-              instagramUrl={event.instagramUrl || ""}
-              title={event.title}
-              image={event.image}
-              description={event.description}
-              date={event.date}
-              topics={event.topics}
-            />
-            ))}
+        {upcomingEvents.length > 0 && (
+          <>
+            <div className="Heading">Upcoming</div>
+            <div className="event-cards upcoming-cards">
+              {upcomingEvents.map((event) => (
+                <Card
+                  key={event.title}
+                  instagramUrl={event.instagramUrl || ""}
+                  title={event.title}
+                  image={event.image}
+                  description={event.description}
+                  date={event.date}
+                  topics={event.topics}
+                />
+              ))}
+            </div>
+          </>
+        )}
 
-        </div>
-        <div className="Heading">Future<div></div></div>
-        <div className="event-cards">
-          {eventData.filter(event => !event.date || event.date =="").map((event) => (
-            <Card
-            instagramUrl={event.instagramUrl || ""}
-            title={event.title}
-            image={event.image}
-            description={event.description}
-            topics={event.topics}
-            />
-          ))}
-          
-        </div>
-        <div className="Heading">Past</div>
-        <div className="event-cards">
-          {eventData.filter(event => event.date && new Date(event.date) < new Date()).map((event) => (
-            <Card
-              instagramUrl={event.instagramUrl || ""}
-              title={event.title}
-              image={event.image}
-              description={event.description}
-              date={event.date}
-              topics={event.topics}
-            />
-          ))}
-        </div>
+        {futureEvents.length > 0 && (
+          <>
+            <div className="Heading">Future</div>
+            <div className="event-cards">
+              {futureEvents.map((event) => (
+                <Card
+                  key={event.title}
+                  instagramUrl={event.instagramUrl || ""}
+                  title={event.title}
+                  image={event.image}
+                  description={event.description}
+                  topics={event.topics}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {pastEvents.length > 0 && (
+          <>
+            <div className="Heading">Past</div>
+            <div className="event-cards">
+              {pastEvents.map((event) => (
+                <Card
+                  key={event.title}
+                  instagramUrl={event.instagramUrl || ""}
+                  title={event.title}
+                  image={event.image}
+                  description={event.description}
+                  date={event.date}
+                  topics={event.topics}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {upcomingEvents.length === 0 && futureEvents.length === 0 && pastEvents.length === 0 && (
+          <div className="no-events">
+            <p>No events to display</p>
+          </div>
+        )}
       </div>
     </div>
   );
