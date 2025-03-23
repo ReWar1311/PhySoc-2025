@@ -12,6 +12,16 @@ interface TeamMember {
 const Team: React.FC = () => {
   const team: TeamMember[] = [
     {
+      name: "Aditya N. Agnihotri",
+      role: "Faculty",
+      image: "https://physics.iitd.ac.in/images/faculty/faculty_LPfUJGc6AK.jpg",
+    },
+    {
+      name: "Prashant Rwear",
+      role: "Coordinator",
+      image: "/src/assets/rewar.png",
+    },
+    {
       name: "Tarun Kumar",
       role: "Coordinator",
       image: "https://drive.google.com/thumbnail?id=1pEccUAPO8si10wK7Lco2QwBhPm9jmtt5&sz=w1000",
