@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { items =['Home', 'Gallery', 'Events', 'Our Team'] , logo } = props;
+  const { items =['Home', 'Events', 'Our Team'] , logo } = props;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [login, setLogin] = useState(false);
   useEffect(() => {

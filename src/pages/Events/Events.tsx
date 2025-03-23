@@ -1,5 +1,4 @@
 import "./Events.css";
-import event from "../../assets/event.jpg";
 import { Card } from "../../components/Card/card";
 
 interface EventData {
@@ -18,7 +17,7 @@ const Events: React.FC = () => {
   const eventData: EventData[] = [
     {
       title: "Research Intern Guide Session",
-      image: "src/assets/events/rigs.png",
+      image: "/events/rigs.png",
       description:
         "Insider’s guide to securing top-tier physics research opportunities. Panel of Physics Trailblazers share their success secrets. Date: 21st August, Time: 5:00 PM, Venue: MS420.",
       instagramUrl: "https://www.instagram.com/p/C-2lZc1yR_v/",
@@ -27,7 +26,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Stellar Safari",
-      image: "src/assets/events/ss.png",
+      image: "/events/ss.png",
       description:
         "Campus mystery hunt to unravel campus gems. Date: August 28th, Time: 6 PM. Form a team, tackle challenges, and uncover hidden gems.",
       instagramUrl: "https://www.instagram.com/p/C--p9T4ytvn/",
@@ -36,7 +35,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Freshers Orientation",
-      image: "src/assets/events/fo.png",
+      image: "/events/fo.png",
       description:
         "Orientation event hosted by PhySoc! Discover the physics department, meet enthusiasts, and learn about opportunities. Date: 4 September, Time: 6:00 pm, Location: MS420.",
       instagramUrl: "https://www.instagram.com/p/C_cpTt-y2d0/",
@@ -45,7 +44,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Movie Screening",
-      image: "src/assets/events/ms.png",
+      image: "/events/ms.png",
       description:
         "Screening of 'The Hitchhiker’s Guide to the Galaxy'! Date: 5th Nov, Time: 6:00 PM, Venue: Seminar Hall. Open to All.",
       instagramUrl: "https://www.instagram.com/p/DB4Pfmjz7e-/",
@@ -54,7 +53,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Stic Lunch",
-      image: "src/assets/events/sl.png",
+      image: "/events/sl.png",
       description:
         "Student-Teacher Interaction Lunch by Physoc! Students and professors connect in an informal setting. Lively discussions and knowledge-sharing.",
       instagramUrl: "Instagram",
@@ -63,7 +62,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Freshers Party",
-      image: "src/assets/events/fp.png",
+      image: "/events/fp.png",
       description:
         "Unforgettable evening with music, games, performances, and dinner! Connect with batchmates and seniors. Date: 4th February 2025, Time: 8:00 PM, Venue: Playgue Club & Lounge.",
       instagramUrl: "https://www.instagram.com/p/DFh8Z7eScrx/",
@@ -72,7 +71,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Future Tech Showcase",
-      image: "src/assets/events/fts.png",
+      image: "/events/fts.png",
       description:
         "Present your game-changing idea on futuristic technologies! Submission Deadline: 2nd March. Top ideas advance to Tryst, IIT Delhi!",
       instagramUrl: "https://www.instagram.com/p/DGvw9dJswey/",
@@ -81,7 +80,7 @@ const Events: React.FC = () => {
     },
     {
       title: "Resonance",
-      image: "src/assets/events/r.png",
+      image: "/events/r.png",
       description:
         "PhySoc’s annual fest! A 3-day adventure with cultural, sports, and fun games. Dates: 28-30 March.",
       instagramUrl: "https://www.instagram.com/p/DG2LsOTylCt/",

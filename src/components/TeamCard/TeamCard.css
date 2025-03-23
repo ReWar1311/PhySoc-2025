@@ -1,27 +1,37 @@
-.teamcard{
+.teamcard {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 180px ;
-    height: 260px ;
+    width: 180px;
+    height: 260px;
     background-color: var(--secondary75);
-    box-shadow: 0 0 10px var(--bg25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
     padding: 20px;
-    margin: 10px;
+    margin: 15px;
     cursor: pointer;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--secondary);
-    position: relative; /* Ensure the overlay and content are positioned relative to this container */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease;
 }
 
 .teamcard-content {
     pointer-events: none;
     position: relative;
     z-index: 2;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 8px;
 }
 
 .teamcard-overlay {
@@ -32,13 +42,14 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+    transition: opacity 0.4s ease;
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    padding: 20px;
 }
 
 .teamcard:hover .teamcard-overlay {
@@ -47,10 +58,12 @@
 
 .teamcard:hover .teamcard-content {
     opacity: 0;
+    transform: translateY(20px);
 }
 
 .teamcard:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .teamcard::before {
@@ -60,22 +73,94 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary50); 
-    opacity: 0;
+    background: linear-gradient(to top, var(--primary50), transparent 70%);
+    opacity: 0.8;
     z-index: 1;
+    transition: opacity 0.4s ease;
 }
 
 .teamcard:hover::before {
+    opacity: 0;
+}
+
+.teamcard h3 {
+    margin: 0 0 5px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.teamcard p {
+    margin: 0;
+    font-size: 0.6rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Social icons styling */
+.teamcard-overlay .icon {
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+}
+
+.teamcard-overlay .icon:hover {
+    transform: scale(1.15);
     opacity: 1;
 }
 
-.teamcard h3, .teamcard p {
-    margin: 0;
+@media screen and (max-width: 768px) {
+    .teamcard {
+        width: 160px;
+        height: 240px;
+        padding: 15px;
+        margin: 10px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .teamcard {
-        width: 100%;
+    /* .teamcard {
+        width: 140px;
+        height: 210px;
+        padding: 12px;
+    } */
+    
+    .teamcard h3 {
+        font-size: 0.8rem;
     }
     
+    .teamcard p {
+        font-size: 0.6rem;
+    }
+}
+
+/* @media screen and (max-width: 480px) {
+    .teamcard {
+        width: calc(50% - 20px);
+        height: 200px;
+    }
+} */
+
+/* Add this to your existing CSS */
+
+.social-icons-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon-link {
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.social-icon-link:hover {
+  transform: scale(1.15);
+}
+
+/* Optional: Add this if you want to remove the underline from links */
+.social-icon-link {
+  text-decoration: none;
 }

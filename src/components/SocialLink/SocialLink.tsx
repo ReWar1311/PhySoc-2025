@@ -12,7 +12,8 @@ type Props = {
   className?: string;
 }
 
-const SocialLink: FC<Props> = ({ href, title, iconName, size, className }) => {
+// Remove size if not needed
+const SocialLink: FC<Props> = ({ href, title, iconName, className }) => {
   return (
     <a
       className={`socialLink ${className}`}

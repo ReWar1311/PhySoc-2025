@@ -30,16 +30,28 @@ const TeamCard: React.FC<TeamCardProps> = (props) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="teamcard-overlay" style={{ opacity: hover ? 1 : 0 }}>
-        {social && social.map((social) =><Icon name={social.name} width={40} height={40}/>  )}
+        {social && (
+          <div className="social-icons-container">
+            {social.map((item, index) => (
+              <a 
+                key={`${item.name}-${index}`}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-link"
+              >
+                <Icon name={item.name} width={40} height={40} />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
       <div className="teamcard-content" style={{ opacity: hover ? 0 : 1 }}>
-        {" "}
         <h3>{name}</h3>
         <p>{role}</p>
       </div>
     </div>
   );
-
 };
 
 export default TeamCard;

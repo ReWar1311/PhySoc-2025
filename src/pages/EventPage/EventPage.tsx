@@ -41,9 +41,9 @@ interface InvitationData {
 
 const EventPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, _setError] = useState<string | null>(null);
   
-  const [images, setImages] = useState([
+  const [images, _setImages] = useState([
     "../assets/event.jpg",
     "../assets/event.jpg",
     "../assets/event.jpg",
@@ -53,7 +53,7 @@ const EventPage = () => {
     "../assets/event.jpg",
   ]);
 
-  const [event, setEvent] = useState<EventData>({
+  const [event, _setEvent] = useState<EventData>({
     eventName: "EVENT NAME",
     eventDescription: "A small description about event in one or two lines.",
     eventDate: "DD/MM/YYYY",
@@ -61,7 +61,7 @@ const EventPage = () => {
     registrationDeadline: "2025-03-17T15:20:59",
   });
 
-  const [yourTeam, setYourTeam] = useState<Team>({
+  const [yourTeam, _setYourTeam] = useState<Team>({
     teamName: "TEAM NAME",
     teamSlogan: '"This is a slogan"',
     members: [
@@ -92,7 +92,7 @@ const EventPage = () => {
     ],
   });
 
-  const [invitations, setInvitations] = useState<InvitationData[]>([
+  const [invitations, _setInvitations] = useState<InvitationData[]>([
     { id: "1", name: "John Doe", teamName: "TEAM NAME", message: "This is a message", status: "pending" },
     { id: "2", name: "John Doe", teamName: "TEAM NAME", message: "This is a message", status: "accepted" },
     { id: "3", name: "John Doe", teamName: "TEAM NAME", message: "This is a message", status: "rejected" },
@@ -170,7 +170,7 @@ const EventPage = () => {
     }, 1000);
   };
 
-  const handleDeleteTeam = (teamId?: string) => {
+  const handleDeleteTeam = (_teamId?: string) => {
     setIsLoading(true);
     // API call 
     setTimeout(() => {
@@ -183,7 +183,7 @@ const EventPage = () => {
     // API
   };
 
-  const handleInvitationResponse = (invitationId: string, accept: boolean) => {
+  const handleInvitationResponse = (_invitationId: string, _accept: boolean) => {
     // API
   };
 

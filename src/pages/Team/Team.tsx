@@ -219,22 +219,22 @@ const Team: React.FC = () => {
                      <TeamCard key={index} name={member.name} role={member.role} image={member.image} social={member.socials?member.socials:[]}/>
           ))}
         </div>
-        <div className="Heading">Overall Coordinator and Advisors:</div>
+        <div className="Heading">Overall Coordinators:</div>
         <div className="team-cards">
           {team.filter(member => member.role === 'OC').map((member, index) => (
-                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} />
+                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} social={member.socials?member.socials:[]} />
           ))}
         </div>
         <div className="Heading">Coordinators:</div>
         <div className="team-cards">
           {team.filter(member => member.role === 'Coordinator').map((member, index) => (
-                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} />
+                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} social={member.socials?member.socials:[]}/>
           ))}
         </div>
         <div className="Heading">Executives:</div>
         <div className="team-cards">
           {team.filter(member => member.role === 'Executive').map((member, index) => (
-                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} />
+                     <TeamCard key={index} name={member.name} role={member.role} image={member.image} social={member.socials?member.socials:[]}/>
           ))}
         </div>
       </div>

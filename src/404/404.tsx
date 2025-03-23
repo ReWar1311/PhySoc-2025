@@ -2,7 +2,7 @@ import './404.css';
 
 const BadGateway: React.FC = () => {
   return (
-    <div>
+    <div className='hiii'>
     <div className="err-main"></div>
     <svg id="svgWrap_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250">
         <g>
