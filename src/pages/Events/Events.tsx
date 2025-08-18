@@ -88,13 +88,13 @@ const Events: React.FC = () => {
       topics: ["Resonance", "Annual Fest", "Physics"],
     },
     {
-      title: "Quantum Computing Workshop",
-      image: "/events/r.png",
+      title: "PG Orientation",
+      image: "/events/pgorientation25.jpeg",
       description:
-        "Dive into the fundamentals of quantum computing with hands-on coding examples. Date: 20th September 2025, Time: 5:00 PM, Venue: MS420.",
-      instagramUrl: "#",
+        "From Campus to Career – Learn from Those Who’ve Been There. Date: 20th August 2025, Time: 3:30 PM, Venue: LH318.",
+      instagramUrl: "https://www.instagram.com/p/DNcX3dyxIm7/?hl=en",
       date: "09/20/2025",  // After today's date → shows under Upcoming
-      topics: ["Quantum Computing", "Workshop", "Physics"],
+      topics: ["Connect", "Alumini", "Carrers"],
     },
     
   ];
