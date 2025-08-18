@@ -87,6 +87,16 @@ const Events: React.FC = () => {
       date: "03/28/2025",
       topics: ["Resonance", "Annual Fest", "Physics"],
     },
+    {
+      title: "PG Orientation",
+      image: "/events/pgorientation25.jpeg",
+      description:
+        "From Campus to Career – Learn from Those Who’ve Been There. Date: 20th August 2025, Time: 3:30 PM, Venue: LH318.",
+      instagramUrl: "https://www.instagram.com/p/DNcX3dyxIm7/?hl=en",
+      date: "09/20/2025",  // After today's date → shows under Upcoming
+      topics: ["Connect", "Alumini", "Carrers"],
+    },
+    
   ];
 
   // Create filtered and sorted arrays
