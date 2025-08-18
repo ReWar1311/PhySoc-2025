@@ -87,6 +87,16 @@ const Events: React.FC = () => {
       date: "03/28/2025",
       topics: ["Resonance", "Annual Fest", "Physics"],
     },
+    {
+      title: "Quantum Computing Workshop",
+      image: "/events/r.png",
+      description:
+        "Dive into the fundamentals of quantum computing with hands-on coding examples. Date: 20th September 2025, Time: 5:00 PM, Venue: MS420.",
+      instagramUrl: "#",
+      date: "09/20/2025",  // After today's date → shows under Upcoming
+      topics: ["Quantum Computing", "Workshop", "Physics"],
+    },
+    
   ];
 
   // Create filtered and sorted arrays
