@@ -129,6 +129,91 @@ header{
 .bar.active:nth-child(3) {
     transform: translateY(-7.5px) rotate(-45deg);
 }
+.team-dropdown {
+  position: relative;
+}
+
+.team-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.team-btn {
+  cursor: pointer;
+  padding: 0px 12px;
+  display: inline-block;
+  color: white;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* Attach directly below */
+  left: 0;
+  margin-top: 0;   /* NO GAP */
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  min-width: 130px;
+  z-index: 999;
+}
+
+.team-dropdown {
+  position: relative;
+}
+
+.team-btn {
+  cursor: pointer;
+  color: white;
+  padding: 0px 12px;
+  display: inline-block;
+}
+
+.team-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #111;
+  right: 0;
+  top: 110%;
+  padding: 0px 0;
+  border: 1px solid #444;
+  border-radius: 6px;
+  min-width: 120px;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background: #222;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 8px 12px;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background: #222;
+}
+
+.dropdown-menu a.dropdown-active {
+  border: 1px solid #a855f7;
+  border-radius: 10px;
+  color: #a855f7;
+  font-weight: 600;
+}
+
 
 /* Mobile Login Button */
 .mobile-login {

@@ -25,3 +25,17 @@
 .team-cards::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
 }
+
+.tab {
+  padding: .4rem .8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid #555;
+  opacity: .8;
+}
+.tab:hover { opacity: 1; }
+.tab-active {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(168,85,247,.25);
+  opacity: 1;
+}
