@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { items =['Home', 'Events', 'Our Team'] , logo } = props;
+  const { items = ['Home', 'Events'], logo } = props;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [login, setLogin] = useState(false);
   useEffect(() => {
@@ -28,53 +28,63 @@ const Header: React.FC<HeaderProps> = (props) => {
       console.error('Error reading cookie:', error);
       setLogin(false);
     }
-  }, []); 
-  
+  }, []);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
     <>
-    <div 
-      onClick={() => setMobileMenuOpen(false)}
-      style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'rgb(0, 0, 0, 0.5)',
-      display: mobileMenuOpen ? 'block' : 'none',
-      pointerEvents: 'all',
-      zIndex: 998
-      }}
-    ></div>
-    <header className={`${mobileMenuOpen ? 'header-mobile-open' : ''}`}>
-      <a href='/' className= 'logo'><img src={logo||logo2} alt="logo" /></a>
-      <nav className={`navbar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-        <ul className={`nav-links header-links ${mobileMenuOpen ? 'active' : ''}`}>
-          {items.map((item, index) => (
-            <li className='nav-item' key={index}>
-              <a href={`/${item.replace(/\s/g, '').toLowerCase()}`} onClick={() => setMobileMenuOpen(false)}>
-                {item}
-              </a>
+      <div
+        onClick={() => setMobileMenuOpen(false)}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgb(0, 0, 0, 0.5)',
+          display: mobileMenuOpen ? 'block' : 'none',
+          pointerEvents: 'all',
+          zIndex: 998
+        }}
+      ></div>
+      <header className={`${mobileMenuOpen ? 'header-mobile-open' : ''}`}>
+        <a href='/' className='logo'><img src={logo || logo2} alt="logo" /></a>
+        <nav className={`navbar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <ul className={`nav-links header-links ${mobileMenuOpen ? 'active' : ''}`}>
+            {items.map((item, index) => (
+              <li className='nav-item' key={index}>
+                <a href={`/${item.replace(/\s/g, '').toLowerCase()}`} onClick={() => setMobileMenuOpen(false)}>
+                  {item}
+                </a>
+              </li>
+            ))}
+            {/* TEAM YEAR DROPDOWN */}
+            <li className="nav-item team-dropdown">
+              <span className="team-btn">Team ▾</span>
+
+              <ul className="dropdown-menu">
+                <li><a href="/team/25-26" onClick={() => setMobileMenuOpen(false)}>25–26</a></li>
+                <li><a href="/team/24-25" onClick={() => setMobileMenuOpen(false)}>24–25</a></li>
+              </ul>
             </li>
-          ))}
-            {!login && <li className='nav-item mobile-login'><a href='/login'><button  className='login-btn'>Login/Signup</button></a></li>}
-            {login && <li className='nav-item mobile-login'><a href='/profile'><button  className='login-btn'>Profile</button></a></li>}
-        </ul>
-      </nav>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
-        {login && <a href='/profile'><button className='login-btn desktop-login'>Profile</button></a>}
-        <div className="hamburger-menu" onClick={toggleMobileMenu} style={{ marginLeft: '10px' }}>
-          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
-          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
-          <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+
+            {!login && <li className='nav-item mobile-login'><a href='/login'><button className='login-btn'>Login/Signup</button></a></li>}
+            {login && <li className='nav-item mobile-login'><a href='/profile'><button className='login-btn'>Profile</button></a></li>}
+          </ul>
+        </nav>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {!login && <a href='/login'><button className='login-btn desktop-login'>Login/Signup</button></a>}
+          {login && <a href='/profile'><button className='login-btn desktop-login'>Profile</button></a>}
+          <div className="hamburger-menu" onClick={toggleMobileMenu} style={{ marginLeft: '10px' }}>
+            <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+            <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+            <div className={`bar ${mobileMenuOpen ? 'active' : ''}`}></div>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
     </>
   )
 };
