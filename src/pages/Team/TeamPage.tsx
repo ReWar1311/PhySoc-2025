@@ -4,7 +4,7 @@ import "./Team.css";
 
 export type TeamMember = {
   name: string;
-  role: "Faculty" | "Overall Coordinator" | "Coordinator" | "Executive";
+  role: "Faculty" | "Overall Coordinator" | "Coordinator" | "Executive"| "Advisor";
   image: string;
   socials?: { name: IconName; link: string }[];
 };
@@ -44,7 +44,8 @@ export default function TeamPage({
           {title}
         </div>
         {section("Faculty Coordinators:", "Faculty")}
-        {section("Overall Coordinators:", "Overall Coordinator")}
+        {section("Overall Coordinator:", "Overall Coordinator")}
+        {section("Advisors:", "Advisor")}
         {section("Coordinators:", "Coordinator")}
         {section("Executives:", "Executive")}
       </div>
