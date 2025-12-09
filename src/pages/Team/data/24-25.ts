@@ -9,7 +9,7 @@ const TEAM_24_25: TeamMember[] = [
     {
       name: "Prashant Rewar",
       role: "Coordinator",
-      image: "/public/rewar.png",
+      image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/rewar.png",
     },
     {
       name: "Tarun Kumar",
