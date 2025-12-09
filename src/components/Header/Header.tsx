@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Header.css';
 import logo2 from '../../assets/logo.png';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   items?: string[];
@@ -62,13 +63,15 @@ const Header: React.FC<HeaderProps> = (props) => {
               </li>
             ))}
             {/* TEAM YEAR DROPDOWN */}
-            <li className="nav-item team-dropdown">
-              <span className="team-btn">Team ▾</span>
 
-              <ul className="dropdown-menu">
-                <li><a href="/team/25-26" onClick={() => setMobileMenuOpen(false)}>25–26</a></li>
-                <li><a href="/team/24-25" onClick={() => setMobileMenuOpen(false)}>24–25</a></li>
-              </ul>
+            <li className=" nav-item team-dropdown">
+              <Link to='/team/25-26'>
+                <button className="team-btn">Team ▾</button>
+              </Link>
+              <div className="content">
+                <Link to="/team/25-26" onClick={() => setMobileMenuOpen(false)}>25–26</Link>
+                <Link to="/team/24-25" onClick={() => setMobileMenuOpen(false)}>24–25</Link>
+              </div>
             </li>
 
             {!login && <li className='nav-item mobile-login'><a href='/login'><button className='login-btn'>Login/Signup</button></a></li>}
