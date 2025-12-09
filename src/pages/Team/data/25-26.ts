@@ -12,7 +12,7 @@ const TEAM_25_26: TeamMember[] = [
     {
       name: "Prashant Rewar",
       role: "Advisor",
-      image: "/public/rewar.png",
+      image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/rewar.png",
     },
     {
         name: "Gagan Pratap Singh",
@@ -45,7 +45,7 @@ const TEAM_25_26: TeamMember[] = [
     },
     {
         name: "Vijay Shree",
-        role: "Coordinator",
+        role: "Executive",
         image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/IMG-20251021-WA0161%20-%20Vijay%20Shree.jpg",
         socials: [
             { name: "mail", link: "mailto:shreevijay281@gmail.com" },
@@ -70,7 +70,7 @@ const TEAM_25_26: TeamMember[] = [
         socials: [
             { name: "mail", link: "mailto:pratikagrahari699@gmail.com" },
             { name: "linkedIn", link: "https://www.linkedin.com/in/prateek-kumar-657535214" },
-            // { name : "instagram", link: ""}
+        
         ]
     },
     {
