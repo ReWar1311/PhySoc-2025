@@ -216,13 +216,54 @@ const TEAM_25_26: TeamMember[] = [
     {
         name: "Ritu Maurya",
         role: "Overall Coordinator",
-        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/upload%20-%20Ritu%20Maurya.jpg",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/RituMaurya.jpg",
         socials: [
             { name: "mail", link: "mailto:ritu191104@gmail.com" },
             { name: "linkedIn", link: "https://www.linkedin.com/in/ritu-maurya-65415a326" },
             { name: "externalLink", link: "https://www.instagram.com/ritu_m37" }
         ]
     },
+    {
+        name: "B SADHANA LAKSHMI",
+        role: "Executive",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/BSADHANALAKSHMI.jpeg"
+    },
+    {
+        name: "Dev Gulati",
+        role: "Executive",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Dev%20Gulati.jpeg"
+    },
+    {
+        name: "Nissanth V",
+        role: "Executive",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Nissanth%20V.jpeg"
+    },
+    {
+        name: "Ritik Singh",
+        role: "Executive",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Ritik%20Singh.jpeg"
+    },
+    {
+        name:"Abhishek Gahane",
+        role: "Executive",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Abhishek%20Gahane.jpeg"
+    },
+    {
+        name : "Arpit Agarwal",
+        role: "Executive",
+        image :"https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Arpit%20Agarwal.jpeg"
+    },
+    {
+        name: "Sahil",
+        role: "Coordinator",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Sahil.jpeg"
+    },
+    {
+        name: "Siddharth Yadav",
+        role: "Coordinator",
+        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Siddharth%20Yadav.jpeg"
+    },
+
     {
         name: "Soumik Roy",
         role: "Coordinator",
