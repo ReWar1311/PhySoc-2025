@@ -71,7 +71,7 @@ const FooterV2: React.FC = () => {
           <p className="resonance-title">Get to know about</p>
 
           <img
-            src="src/assets/resonance.png"
+            src="/assets/resonance.png"
             alt="Resonance"
             className="resonance-logo"
           />
