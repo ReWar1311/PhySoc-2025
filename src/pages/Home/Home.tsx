@@ -18,19 +18,23 @@ const Home: React.FC = () => {
               className="alert-full"
             />
             <div className="home-heading">PhySoc</div>
+            <div className="home-subheading">
+              A community for physics, fun, and curiosity.
+            </div>
             <div className="home-para">
-              "The supreme task of the physicist is to arrive at those universal
+              {/* "The supreme task of the physicist is to arrive at those universal
               elementary laws from which the cosmos can be built up by pure
-              deduction"
+              deduction" */}
+              “The supreme task of the physicist is to discover the universal laws of nature.”
             </div>
             <div style={{ height: "20px" }}></div>
             <div className="button-group">
-              <MainButton link=''/>
+              <MainButton link='#eventSectionID' />
             </div>
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 };

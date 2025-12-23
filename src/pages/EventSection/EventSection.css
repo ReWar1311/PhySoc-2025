@@ -1,0 +1,142 @@
+.event-section {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b1f3b, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* faint grid like your reference */
+.event-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.event-carousel {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  height: 420px;
+  perspective: 1200px;
+}
+
+.event-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 360px;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.event-card.active:hover {
+  transform: translateX(-50%) scale(1.02);
+}
+
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Active card */
+.event-card.active {
+  transform: translateX(-50%) translateZ(0);
+  z-index: 3;
+}
+
+/* Left */
+.event-card.left {
+  transform: translateX(-145%) rotateY(25deg) scale(0.85);
+  filter: blur(2px) brightness(0.65);
+  z-index: 2;
+}
+
+/* Right */
+.event-card.right {
+  transform: translateX(45%) rotateY(-25deg) scale(0.85);
+  filter: blur(2px) brightness(0.65);
+  z-index: 2;
+}
+
+/* Hidden cards */
+.event-card.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Text overlay */
+.event-content {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  text-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.event-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.event-content p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Controls */
+.event-controls {
+  position: absolute;
+  bottom: 70px;
+  display: flex;
+  gap: 18px;
+  z-index: 10;
+}
+
+.event-controls button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+}
+
+.event-controls button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+  .event-carousel {
+    height: 320px;
+  }
+
+  .event-card {
+    width: 260px;
+  }
+
+  .event-card.left,
+  .event-card.right {
+    opacity: 0;
+  }
+}

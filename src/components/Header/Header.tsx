@@ -64,14 +64,10 @@ const Header: React.FC<HeaderProps> = (props) => {
             ))}
             {/* TEAM YEAR DROPDOWN */}
 
-            <li className=" nav-item team-dropdown">
+            <li className="navbar nav-item">
               <Link to='/team/25-26'>
-                <button className="team-btn">Team ▾</button>
+                Our Team
               </Link>
-              <div className="content">
-                <Link to="/team/25-26" onClick={() => setMobileMenuOpen(false)}>25–26</Link>
-                <Link to="/team/24-25" onClick={() => setMobileMenuOpen(false)}>24–25</Link>
-              </div>
             </li>
 
             {!login && <li className='nav-item mobile-login'><a href='/login'><button className='login-btn'>Login/Signup</button></a></li>}

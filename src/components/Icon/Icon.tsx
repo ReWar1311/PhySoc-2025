@@ -13,9 +13,10 @@ import Rocket from '../../img/icons/rocket.svg?react';
 import Skype from '../../img/icons/skype.svg?react';
 import Telegram from '../../img/icons/tg.svg?react';
 import GoogleMaps from '../../img/icons/google-maps.svg?react';
+import Instagram from '../../img/icons/instagram.svg?react';
 
 type IconName = 'arrowUp' | 'code' | 'externalLink' | 'github' | 'linkedIn' | 
-  'location' | 'mail' | 'rocket' | 'skype' | 'telegram' | 'google-maps';
+  'location' | 'mail' | 'rocket' | 'skype' | 'telegram' | 'google-maps'| 'instagram';
 
 const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   arrowUp: ArrowUp,
@@ -29,6 +30,7 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   skype: Skype,
   telegram: Telegram,
   'google-maps': GoogleMaps,
+  instagram: Instagram,
 };
 
 type Props = SVGProps<SVGSVGElement> & {
