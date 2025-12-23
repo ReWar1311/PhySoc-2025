@@ -130,38 +130,6 @@ header{
     transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* DropDown Menu Styles */
-.team-dropdown{
-  display: inline-block;
-}
-.team-dropdown button{
-    background-color: var(--bg75prctg);
-    color: aliceblue;
-    border: none;
-    cursor: pointer;
-}
-.team-dropdown a{
-  display: block;
-  color: aliceblue;
-  text-decoration: none;
-  padding: 2px 2px;
-}
-.team-dropdown .content{
-  display: none;
-  min-width: 100px;
-  background-color: #250341;
-  position:absolute;
-  place-items: center;
-  box-shadow: 2px 2px 3px rgb(107, 1, 146);
-  z-index: 999;
-}
-.team-dropdown:hover .content{
-  display: block;
-}
-.team-dropdown a:hover{
-  text-decoration: underline;
-}
-
 
 /* Mobile Login Button */
 .mobile-login {

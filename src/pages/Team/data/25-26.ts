@@ -233,11 +233,11 @@ const TEAM_25_26: TeamMember[] = [
         role: "Executive",
         image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Dev%20Gulati.jpeg"
     },
-    {
-        name: "Nissanth V",
-        role: "Executive",
-        image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Nissanth%20V.jpeg"
-    },
+    // {
+    //     name: "Nissanth V",
+    //     role: "Executive",
+    //     image: "https://raw.githubusercontent.com/soumik-sr/PHYSOC_TEAM_PHOTOS/main/Nissanth%20V.jpeg"
+    // },
     {
         name: "Ritik Singh",
         role: "Executive",

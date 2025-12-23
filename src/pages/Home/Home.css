@@ -15,11 +15,12 @@
     width: 100%;
     top: 0;
     height: 100vh;
-    background-image: url("../../assets/image.png");
+    background-image: url("../../assets/newDesktp.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     pointer-events: none;
+    opacity: 0.85;
 }
 .home-bg{
     display: inline-block;
@@ -45,12 +46,15 @@
 .home-para{
     margin-left: 10px;
     color: var(--secondary);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     text-align: left;
     margin-top: 20px;
     max-width: 550px;
     letter-spacing: 0.5px;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-style: italic;
 }
 .home-content{
     width:70vw;
@@ -87,6 +91,16 @@
     /* margin-left: 10px; */
     pointer-events: auto;
 }
+.button-group button,
+.button-group a {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-group button:hover,
+.button-group a:hover {
+    box-shadow: 0 8px 25px rgba(160, 90, 255, 0.25);
+}
+
 
 .auth-button {
     background-color: transparent;
@@ -110,6 +124,38 @@
     background-color: var(--primary50);
     transform: translateY(-2px);
 }
+.home-subheading {
+    margin-left: 10px;
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--secondary);
+    opacity: 0.85;
+    letter-spacing: 0.4px;
+}
+
+/* ===== Hero fade-in animation ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-content > * {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+}
+
+.home-content > *:nth-child(1) { animation-delay: 0.1s; }
+.home-content > *:nth-child(2) { animation-delay: 0.2s; }
+.home-content > *:nth-child(3) { animation-delay: 0.3s; }
+.home-content > *:nth-child(4) { animation-delay: 0.4s; }
+
 
 @media screen and (max-width: 600px){
     .home-heading{
@@ -139,5 +185,10 @@
         font-size: 12px;
         padding: 0 20px;
         height: 40px;
+    }
+}
+@media screen and (max-width: 600px){
+    .home-subheading {
+        font-size: 16px;
     }
 }
