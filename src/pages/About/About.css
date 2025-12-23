@@ -15,7 +15,7 @@
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.55)
         ),
-        url("src/assets/about-bg1.jpg");
+        url("../../../public/assets/about-bg1.jpg");
 
     background-size: cover;
     background-position: center;
