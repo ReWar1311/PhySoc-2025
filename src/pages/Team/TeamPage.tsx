@@ -48,8 +48,6 @@ export default function TeamPage({
   return (
     <div className="team">
       <div className="team-bg">
-        {/* PAGE TITLE */}
-        <div className="Heading team-title">{title}</div>
 
         {/* YEAR SWITCH */}
         <div className="team-year-switch">
