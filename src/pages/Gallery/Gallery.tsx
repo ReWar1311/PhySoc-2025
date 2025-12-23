@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const images = [
-  "public/assets/g4.jpg",
+  "/assets/g4.jpg",
   "public/assets/g16.jpg",
   "public/assets/g17.jpg",
   "public/assets/g1.jpg",
